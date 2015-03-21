@@ -10,4 +10,6 @@
 
 @interface FourthViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tableViewRoutines;
+
 @end
