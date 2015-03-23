@@ -19,7 +19,14 @@
     // Do any additional setup after loading the view, typically from a nib.
     posts = [[NSMutableArray alloc]init];
     people = [[NSMutableArray alloc]init];
-    pics = [[NSMutableArray alloc]init];
+    
+    [posts addObject:@"This is awesome! Trying it for the first time guys"];
+    [posts addObject:@"Guys, nice session today, we'll be in touch. uys, nice session today, we'll be in touch. uys, nice session today, we'll be in touch. uys, nice session today, we'll be in touch. uys, nice session today, we'll be in touch. uys, nice session today, we'll be in touch. uys, nice session today, we'll be in touch."];
+    [posts addObject:@"Great time today with my friends at the session, looking forward to a great week"];
+    
+    [people addObject:@"Clark Kent"];
+    [people addObject:@"Coach Carter"];
+    [people addObject:@"John Doe"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,9 +43,8 @@
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"postCell"];
     
-    cell.name = [people objectAtIndex:indexPath.row];
-    cell.profilePicture = [pics objectAtIndex:indexPath.row];
-    cell.post = [posts objectAtIndex:indexPath.row];
+    cell.post.text = [posts objectAtIndex:indexPath.row];
+    cell.name.text = [people objectAtIndex:indexPath.row];
     
     return cell;
 }

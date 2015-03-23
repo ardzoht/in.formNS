@@ -12,7 +12,6 @@
     
     NSMutableArray *posts;
     NSMutableArray *people;
-    NSMutableArray *pics;
     
 }
 @property (weak, nonatomic) IBOutlet UITableView *wallView;
