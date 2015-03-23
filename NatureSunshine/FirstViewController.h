@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    
+    NSMutableArray *posts;
+    NSMutableArray *people;
+    NSMutableArray *pics;
+    
+}
+@property (weak, nonatomic) IBOutlet UITableView *wallView;
 
 
 @end
