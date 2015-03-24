@@ -12,5 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *post;
+@property (weak, nonatomic) IBOutlet UILabel *type;
+@property (nonatomic, assign)CGRect cellFrame;
 
 @end

@@ -30,46 +30,60 @@
                                     <constraint firstAttribute="width" constant="45" id="k6c-YM-Gq5"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jvl-nI-gT3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="153" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jvl-nI-gT3">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.26666668059999998" green="0.46274513010000001" blue="0.1647058874" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="110" id="LB8-1v-Lty" customClass="PostCell">
+                                    <tableViewCell contentMode="scaleToFill" placeholderIntrinsicWidth="310" placeholderIntrinsicHeight="153" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" id="LB8-1v-Lty" customClass="PostCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LB8-1v-Lty" id="Huo-Rq-Kru">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZV-SN-kX4">
-                                                    <rect key="frame" x="16" y="82" width="233" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="pys-jV-iCs"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="body" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-Bn-AUO">
-                                                    <rect key="frame" x="16" y="18" width="296" height="56"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="body" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-Bn-AUO">
+                                                    <rect key="frame" x="16" y="18" width="296" height="106"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZV-SN-kX4">
+                                                    <rect key="frame" x="16" y="125" width="72" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="IuV-0z-0he"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEp-C1-agB">
+                                                    <rect key="frame" x="89" y="125" width="74" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="74" id="Ntb-qL-vbb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eSb-Bn-AUO" secondAttribute="trailing" id="0AV-hL-Zrn"/>
-                                                <constraint firstItem="vZV-SN-kX4" firstAttribute="top" secondItem="eSb-Bn-AUO" secondAttribute="bottom" constant="8" symbolic="YES" id="6b4-eU-ATe"/>
-                                                <constraint firstItem="vZV-SN-kX4" firstAttribute="leading" secondItem="eSb-Bn-AUO" secondAttribute="leading" id="9uh-6L-yYy"/>
-                                                <constraint firstItem="eSb-Bn-AUO" firstAttribute="top" secondItem="Huo-Rq-Kru" secondAttribute="topMargin" constant="10" id="BVk-DJ-eTo"/>
-                                                <constraint firstItem="eSb-Bn-AUO" firstAttribute="trailing" secondItem="vZV-SN-kX4" secondAttribute="trailing" constant="63" id="HFV-z8-jZG"/>
-                                                <constraint firstItem="eSb-Bn-AUO" firstAttribute="leading" secondItem="Huo-Rq-Kru" secondAttribute="leadingMargin" constant="8" id="iyn-hb-RNk"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="vZV-SN-kX4" secondAttribute="bottom" constant="-1" id="sx1-ED-SBP"/>
+                                                <constraint firstItem="eSb-Bn-AUO" firstAttribute="top" secondItem="Huo-Rq-Kru" secondAttribute="topMargin" constant="10" id="0qX-LE-BGQ"/>
+                                                <constraint firstItem="eSb-Bn-AUO" firstAttribute="leading" secondItem="Huo-Rq-Kru" secondAttribute="leadingMargin" constant="8" id="6bL-kd-UUc"/>
+                                                <constraint firstItem="eSb-Bn-AUO" firstAttribute="trailing" secondItem="Huo-Rq-Kru" secondAttribute="trailingMargin" id="9wI-Fp-DlW"/>
+                                                <constraint firstItem="vZV-SN-kX4" firstAttribute="bottom" secondItem="AEp-C1-agB" secondAttribute="bottom" id="IzA-OV-KDt"/>
+                                                <constraint firstItem="AEp-C1-agB" firstAttribute="leading" secondItem="vZV-SN-kX4" secondAttribute="trailing" constant="1" id="Kb8-ur-Fuh"/>
+                                                <constraint firstItem="AEp-C1-agB" firstAttribute="top" secondItem="vZV-SN-kX4" secondAttribute="top" id="McJ-Iy-CIH"/>
+                                                <constraint firstItem="eSb-Bn-AUO" firstAttribute="leading" secondItem="vZV-SN-kX4" secondAttribute="leading" id="PMH-a6-U2s"/>
+                                                <constraint firstAttribute="bottom" secondItem="AEp-C1-agB" secondAttribute="bottom" constant="8" id="X6c-Dl-yXv"/>
+                                                <constraint firstItem="vZV-SN-kX4" firstAttribute="top" relation="lessThanOrEqual" secondItem="eSb-Bn-AUO" secondAttribute="bottom" constant="1" id="srD-qQ-C8r"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="name" destination="vZV-SN-kX4" id="hDl-6a-Nj2"/>
                                             <outlet property="post" destination="eSb-Bn-AUO" id="tz7-UE-2bO"/>
+                                            <outlet property="type" destination="AEp-C1-agB" id="ROV-bF-y8f"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
