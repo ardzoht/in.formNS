@@ -21,7 +21,7 @@
     people = [[NSMutableArray alloc]init];
     types = [[NSMutableArray alloc]init];
     [posts addObject:@"This is awesome! Trying it for the first time guys"];
-    [posts addObject:@"Guys, nice session today, we'll be in touch. uys, nice session today, we'll be in touch. uys, nice session today, we'll be in touch. uys, nice session today, we'll be in touch. uys, nice session today, we'll be in touch. uys, nice session today, we'll be in touch. uys, nice session today, we'll be in touch."];
+    [posts addObject:@"Guys, nice session today, we'll be in touch."];
     [posts addObject:@"Great time today with my friends at the session, looking forward to a great week"];
     
     [people addObject:@"Clark Kent"];
@@ -32,8 +32,6 @@
     [types addObject:@"coach"];
     [types addObject:@"member"];
     
-    self.wallView.estimatedRowHeight = 153.0;
-
 }
 
 - (void)viewDidAppear:(BOOL)animated

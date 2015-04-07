@@ -22,6 +22,8 @@
 
 // Used to add events to Calendar
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
+
+@property (weak,nonatomic) NSString *calendarIdentifier;
 @end
 
 
@@ -35,10 +37,35 @@
     [super viewDidLoad];
     // Initialize the event store
     self.eventStore = [[EKEventStore alloc] init];
+    
     // Initialize the events list
     self.eventsList = [[NSMutableArray alloc] initWithCapacity:0];
     // The Add button is initially disabled
-    self.addButton.enabled = NO;
+    self.addButton.enabled =YES ;
+    self.defaultCalendar = [EKCalendar calendarWithEventStore:_eventStore];
+    self.defaultCalendar.title = @"Routines";
+    EKSource *theSource = nil;
+    for (EKSource *source in _eventStore.sources) {
+        if (source.sourceType == EKSourceTypeLocal) {
+            theSource = source;
+            break;
+        }
+    }
+    
+    if (theSource) {
+        self.defaultCalendar.source = theSource;
+    } else {
+        NSLog(@"Error: Local source not available");
+        return;
+    }
+    NSError *error = nil;
+    BOOL result = [_eventStore saveCalendar:self.defaultCalendar commit:YES error:&error];
+    if (result) {
+        NSLog(@"Saved calendar to event store.");
+        self.calendarIdentifier = self.defaultCalendar.calendarIdentifier;
+    } else {
+        NSLog(@"Error saving calendar: %@.", error);
+    }
 }
 
 
@@ -105,8 +132,8 @@
         case EKAuthorizationStatusNotDetermined: [self requestCalendarAccess];
             break;
             // Display a message if the user has denied or restricted access to Calendar
-        case EKAuthorizationStatusDenied:
-        case EKAuthorizationStatusRestricted:
+        case EKAuthorizationStatusDenied: NSLog(@"Denied");
+        case EKAuthorizationStatusRestricted: NSLog(@"Restricted");
         {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Privacy Warning" message:@"Permission was not granted for Calendar"
                                                            delegate:nil
@@ -128,6 +155,7 @@
      {
          if (granted)
          {
+             NSLog(@"Sup");
              FourthViewController * __weak weakSelf = self;
              // Let's ensure that our code will be executed from the main queue
              dispatch_async(dispatch_get_main_queue(), ^{
@@ -143,7 +171,7 @@
 -(void)accessGrantedForCalendar
 {
     // Let's get the default calendar associated with our event store
-    self.defaultCalendar = self.eventStore.defaultCalendarForNewEvents;
+
     // Enable the Add button
     self.addButton.enabled = YES;
     // Fetch all events happening in the next 24 hours and put them into eventsList
@@ -165,9 +193,8 @@
     NSDateComponents *tomorrowDateComponents = [[NSDateComponents alloc] init];
     tomorrowDateComponents.day = 1;
     
-    NSDate *endDate = [[NSCalendar currentCalendar] dateByAddingComponents:tomorrowDateComponents
-                                                                    toDate:startDate
-                                                                   options:0];
+    NSDate *endDate = [NSDate distantFuture];
+    
     // We will only search the default calendar for our events
     NSArray *calendarArray = [NSArray arrayWithObject:self.defaultCalendar];
     
