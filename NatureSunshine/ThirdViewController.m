@@ -7,8 +7,10 @@
 //
 
 #import "ThirdViewController.h"
-
+#import "PhotoCell.h"
 @interface ThirdViewController ()
+
+@property (nonatomic, strong) NSArray *tableItems;
 
 @end
 
@@ -16,22 +18,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // Load the items in the table
+    self.tableItems = @[[UIImage imageNamed:@"demo_1.jpg"],
+                        [UIImage imageNamed:@"demo_2.jpg"],
+                        [UIImage imageNamed:@"demo_2.jpg"],
+                        [UIImage imageNamed:@"demo_1.jpg"],
+                        [UIImage imageNamed:@"demo_2.jpg"]];
 }
 
-- (void)didReceiveMemoryWarning {
+
+-(void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
-*/
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.tableItems.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"photoCell";
+    PhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    cell.titleLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Example %d",), indexPath.row];
+    cell.parallaxImage.image = self.tableItems[indexPath.row];
+    
+    return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    // Get visible cells on table view.
+    NSArray *visibleCells = [self.tableView visibleCells];
+    
+    for (PhotoCell *cell in visibleCells) {
+        [cell cellOnTableView:self.tableView didScrollOnView:self.view];
+    }
+}
 
 @end

@@ -10,4 +10,6 @@
 
 @interface ThirdViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end

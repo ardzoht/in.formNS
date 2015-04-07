@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D87p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -25,7 +24,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="natures-sunshine.gif" translatesAutoresizingMaskIntoConstraints="NO" id="32X-Ae-5Td">
-                                <rect key="frame" x="130" y="20" width="45" height="44"/>
+                                <rect key="frame" x="156" y="20" width="45" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="T98-87-9BQ"/>
                                     <constraint firstAttribute="width" constant="45" id="k6c-YM-Gq5"/>
@@ -95,7 +94,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="32X-Ae-5Td" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="130" id="NYx-ql-TDW"/>
+                            <constraint firstItem="32X-Ae-5Td" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="140" id="9FH-Ns-Spk"/>
                             <constraint firstItem="Hoz-yO-oqN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="PR7-7r-3UW"/>
                             <constraint firstItem="jvl-nI-gT3" firstAttribute="top" secondItem="Hoz-yO-oqN" secondAttribute="bottom" id="Voz-Rb-pW1"/>
                             <constraint firstItem="jvl-nI-gT3" firstAttribute="bottom" secondItem="HdR-SS-Dgt" secondAttribute="top" id="XNe-FP-EYA"/>
@@ -361,7 +360,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6g2-CH-FTR">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6g2-CH-FTR">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="My Routines" id="QCw-dJ-KZE">
@@ -373,7 +372,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="891-Eb-BL2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="891-Eb-BL2">
                                 <rect key="frame" x="0.0" y="108" width="320" height="411"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -403,6 +402,16 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="891-Eb-BL2" firstAttribute="top" secondItem="6g2-CH-FTR" secondAttribute="bottom" id="3IY-Od-vnQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="891-Eb-BL2" secondAttribute="trailing" constant="-16" id="B9e-hn-2QL"/>
+                            <constraint firstItem="Y1e-bG-yTO" firstAttribute="top" secondItem="891-Eb-BL2" secondAttribute="bottom" id="GaG-ks-pJQ"/>
+                            <constraint firstItem="6g2-CH-FTR" firstAttribute="leading" secondItem="nR6-z4-3e2" secondAttribute="leadingMargin" constant="-16" id="GdD-iJ-DAW"/>
+                            <constraint firstItem="6g2-CH-FTR" firstAttribute="top" secondItem="P5q-M2-aCH" secondAttribute="bottom" id="PhW-R8-zu4"/>
+                            <constraint firstItem="891-Eb-BL2" firstAttribute="top" secondItem="6g2-CH-FTR" secondAttribute="bottom" id="egi-1V-gf5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6g2-CH-FTR" secondAttribute="trailing" constant="-16" id="fCC-7f-RTO"/>
+                            <constraint firstItem="891-Eb-BL2" firstAttribute="leading" secondItem="nR6-z4-3e2" secondAttribute="leadingMargin" constant="-16" id="r65-zu-Vk6"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Routines" image="routines.png" id="Ebe-3r-ltA"/>
                     <navigationItem key="navigationItem" id="blw-Ij-miJ"/>
@@ -445,13 +454,64 @@
                     <view key="view" contentMode="scaleToFill" id="5Jj-35-7Bk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="125" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="REe-ty-neN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="photoCell" rowHeight="125" id="Yda-ce-Sby" customClass="PhotoCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yda-ce-Sby" id="7uj-Wj-kEY">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="demo_1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Zue-QH-W91">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="{Title}" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPN-6L-Yb9">
+                                                    <rect key="frame" x="8" y="92" width="234" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zue-QH-W91" firstAttribute="top" secondItem="7uj-Wj-kEY" secondAttribute="topMargin" constant="-8" id="9q9-0D-mNf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Zue-QH-W91" secondAttribute="bottom" constant="4" id="fMN-iS-xZG"/>
+                                                <constraint firstItem="Zue-QH-W91" firstAttribute="leading" secondItem="7uj-Wj-kEY" secondAttribute="leadingMargin" constant="-8" id="fhc-XG-WlH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Zue-QH-W91" secondAttribute="trailing" constant="-8" id="wrT-qo-kdB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="parallaxImage" destination="Zue-QH-W91" id="NNn-Ub-VP2"/>
+                                            <outlet property="titleLabel" destination="fPN-6L-Yb9" id="Pr7-qN-7dk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="IqX-K0-6ZW" id="dvw-4T-qL8"/>
+                                    <outlet property="delegate" destination="IqX-K0-6ZW" id="tn4-MC-y97"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Byh-Qg-Cgx" firstAttribute="top" secondItem="REe-ty-neN" secondAttribute="bottom" id="0wM-NU-rhb"/>
+                            <constraint firstItem="REe-ty-neN" firstAttribute="leading" secondItem="5Jj-35-7Bk" secondAttribute="leadingMargin" constant="-16" id="Sbg-bT-FpT"/>
+                            <constraint firstItem="REe-ty-neN" firstAttribute="top" secondItem="5Jj-35-7Bk" secondAttribute="topMargin" id="jRm-NN-fKe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="REe-ty-neN" secondAttribute="trailing" constant="-16" id="rai-aC-J2k"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Photos" image="photos.png" id="eec-Ca-eB2"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="tableView" destination="REe-ty-neN" id="mal-uj-dUg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZY-hP-1B6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452" y="791"/>
+            <point key="canvasLocation" x="-423" y="797"/>
         </scene>
         <!--Tracker-->
         <scene sceneID="N60-6T-0td">
@@ -474,6 +534,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="demo_1.jpg" width="460" height="276"/>
         <image name="diet.png" width="30" height="30"/>
         <image name="group.png" width="30" height="30"/>
         <image name="natures-sunshine.gif" width="275" height="238"/>
