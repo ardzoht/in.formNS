@@ -32,6 +32,10 @@
     [types addObject:@"coach"];
     [types addObject:@"member"];
     
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated

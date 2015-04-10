@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Parse/Parse.h>
 @interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     
     NSMutableArray *posts;
