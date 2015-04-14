@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49DBDD551ADCC2830051EAA0 /* camera-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD511ADCC2830051EAA0 /* camera-7@2x.png */; };
+		49DBDD561ADCC2830051EAA0 /* heart-rate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD521ADCC2830051EAA0 /* heart-rate@2x.png */; };
+		49DBDD571ADCC2830051EAA0 /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD531ADCC2830051EAA0 /* house@2x.png */; };
+		49DBDD581ADCC2830051EAA0 /* people-group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD541ADCC2830051EAA0 /* people-group@2x.png */; };
 		A1C48D821AAFBC3400398E93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C48D811AAFBC3400398E93 /* main.m */; };
 		A1C48D851AAFBC3400398E93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C48D841AAFBC3400398E93 /* AppDelegate.m */; };
 		A1C48D881AAFBC3400398E93 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C48D871AAFBC3400398E93 /* FirstViewController.m */; };
@@ -63,6 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49DBDD511ADCC2830051EAA0 /* camera-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-7@2x.png"; sourceTree = "<group>"; };
+		49DBDD521ADCC2830051EAA0 /* heart-rate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-rate@2x.png"; sourceTree = "<group>"; };
+		49DBDD531ADCC2830051EAA0 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
+		49DBDD541ADCC2830051EAA0 /* people-group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "people-group@2x.png"; sourceTree = "<group>"; };
 		A1C48D7C1AAFBC3400398E93 /* NatureSunshine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatureSunshine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C48D801AAFBC3400398E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C48D811AAFBC3400398E93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -157,6 +165,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49DBDD481ADCC0160051EAA0 /* tab-Icons2 */ = {
+			isa = PBXGroup;
+			children = (
+				49DBDD511ADCC2830051EAA0 /* camera-7@2x.png */,
+				49DBDD521ADCC2830051EAA0 /* heart-rate@2x.png */,
+				49DBDD531ADCC2830051EAA0 /* house@2x.png */,
+				49DBDD541ADCC2830051EAA0 /* people-group@2x.png */,
+			);
+			name = "tab-Icons2";
+			sourceTree = "<group>";
+		};
 		A1C48D731AAFBC3400398E93 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +217,7 @@
 		A1C48D7E1AAFBC3400398E93 /* NatureSunshine */ = {
 			isa = PBXGroup;
 			children = (
+				49DBDD481ADCC0160051EAA0 /* tab-Icons2 */,
 				FB4F041E1ABE060200F4B765 /* Media */,
 				A1C48DB41AAFC33700398E93 /* tab-icons */,
 				A1C48D831AAFBC3400398E93 /* AppDelegate.h */,
@@ -360,9 +380,13 @@
 				A1C48DBF1AAFC33700398E93 /* tracker.png in Resources */,
 				A1C48D8E1AAFBC3400398E93 /* Main.storyboard in Resources */,
 				FB4F04261ABE061D00F4B765 /* natures-sunshine.gif in Resources */,
+				49DBDD581ADCC2830051EAA0 /* people-group@2x.png in Resources */,
 				FB43A1E51AD446DD00110063 /* demo_1.jpg in Resources */,
 				A1C48DBB1AAFC33700398E93 /* diet.png in Resources */,
+				49DBDD551ADCC2830051EAA0 /* camera-7@2x.png in Resources */,
 				A1C48D931AAFBC3400398E93 /* LaunchScreen.xib in Resources */,
+				49DBDD561ADCC2830051EAA0 /* heart-rate@2x.png in Resources */,
+				49DBDD571ADCC2830051EAA0 /* house@2x.png in Resources */,
 				A1C48DBC1AAFC33700398E93 /* group.png in Resources */,
 				A1C48D901AAFBC3400398E93 /* Images.xcassets in Resources */,
 				FB43A1E71AD446DD00110063 /* demo_3.jpg in Resources */,

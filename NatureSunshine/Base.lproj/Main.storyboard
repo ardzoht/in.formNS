@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D87p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -105,7 +105,7 @@
                             <constraint firstItem="32X-Ae-5Td" firstAttribute="top" secondItem="TRh-jT-375" secondAttribute="bottom" id="rcg-mU-bNX"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Wall" image="wall.png" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="My Wall" image="house.png" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="wallView" destination="jvl-nI-gT3" id="mDg-mm-5oG"/>
                     </connections>
@@ -189,11 +189,11 @@
                             <constraint firstItem="3pZ-O3-N9J" firstAttribute="trailing" secondItem="W3N-F6-Q9c" secondAttribute="trailing" id="w1z-6I-cFL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Group" image="group.png" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="My Group" image="people-group.png" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="360" y="-493"/>
+            <point key="canvasLocation" x="352" y="-489"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oyL-W0-gGd">
@@ -295,7 +295,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="REe-ty-neN" secondAttribute="trailing" constant="-16" id="rai-aC-J2k"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Photos" image="photos.png" id="eec-Ca-eB2"/>
+                    <tabBarItem key="tabBarItem" title="My Photos" image="camera-7.png" id="eec-Ca-eB2"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="tableView" destination="REe-ty-neN" id="mal-uj-dUg"/>
@@ -303,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZY-hP-1B6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-495" y="-266"/>
+            <point key="canvasLocation" x="-542" y="-8"/>
         </scene>
         <!--Tracker-->
         <scene sceneID="N60-6T-0td">
@@ -318,7 +318,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tracker" image="tracker.png" id="t10-u7-3zm"/>
+                    <tabBarItem key="tabBarItem" title="Tracker" image="heart-rate.png" id="t10-u7-3zm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HQ-Wr-gqK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,12 +326,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera-7.png" width="30" height="30"/>
         <image name="demo_1.jpg" width="460" height="276"/>
-        <image name="group.png" width="30" height="30"/>
+        <image name="heart-rate.png" width="29" height="30"/>
+        <image name="house.png" width="30" height="30"/>
         <image name="natures-sunshine.gif" width="275" height="238"/>
-        <image name="photos.png" width="30" height="30"/>
-        <image name="tracker.png" width="30" height="30"/>
-        <image name="wall.png" width="30" height="30"/>
+        <image name="people-group.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
