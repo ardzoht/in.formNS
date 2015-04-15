@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class addPhotoVC;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) addPhotoVC *VC;
 
 @end
 

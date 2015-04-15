@@ -8,6 +8,7 @@
 
 #import "ThirdViewController.h"
 #import "PhotoCell.h"
+
 @interface ThirdViewController ()
 
 @property (nonatomic, strong) NSArray *tableItems;
@@ -70,5 +71,6 @@
         [cell cellOnTableView:self.tableView didScrollOnView:self.view];
     }
 }
+
 
 @end

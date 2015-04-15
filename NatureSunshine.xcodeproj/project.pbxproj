@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		498E1C881ADECFB400E6C012 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 498E1C871ADECFB400E6C012 /* DismissSegue.m */; };
+		498E1C8B1ADED17000E6C012 /* addPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 498E1C8A1ADED17000E6C012 /* addPhotoVC.m */; };
 		49DBDD551ADCC2830051EAA0 /* camera-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD511ADCC2830051EAA0 /* camera-7@2x.png */; };
 		49DBDD561ADCC2830051EAA0 /* heart-rate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD521ADCC2830051EAA0 /* heart-rate@2x.png */; };
 		49DBDD571ADCC2830051EAA0 /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD531ADCC2830051EAA0 /* house@2x.png */; };
@@ -67,6 +69,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		498E1C861ADECFB400E6C012 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
+		498E1C871ADECFB400E6C012 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
+		498E1C891ADED17000E6C012 /* addPhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addPhotoVC.h; sourceTree = "<group>"; };
+		498E1C8A1ADED17000E6C012 /* addPhotoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addPhotoVC.m; sourceTree = "<group>"; };
 		49DBDD511ADCC2830051EAA0 /* camera-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-7@2x.png"; sourceTree = "<group>"; };
 		49DBDD521ADCC2830051EAA0 /* heart-rate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-rate@2x.png"; sourceTree = "<group>"; };
 		49DBDD531ADCC2830051EAA0 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
@@ -238,6 +244,10 @@
 				A1C48DB21AAFBD5000398E93 /* SixthViewController.m */,
 				FB4F04271ABE072F00F4B765 /* PostCell.h */,
 				FB4F04281ABE072F00F4B765 /* PostCell.m */,
+				498E1C861ADECFB400E6C012 /* DismissSegue.h */,
+				498E1C871ADECFB400E6C012 /* DismissSegue.m */,
+				498E1C891ADED17000E6C012 /* addPhotoVC.h */,
+				498E1C8A1ADED17000E6C012 /* addPhotoVC.m */,
 			);
 			path = NatureSunshine;
 			sourceTree = "<group>";
@@ -409,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C48D8B1AAFBC3400398E93 /* SecondViewController.m in Sources */,
+				498E1C881ADECFB400E6C012 /* DismissSegue.m in Sources */,
 				A1C48DAA1AAFBD0100398E93 /* ThirdViewController.m in Sources */,
 				A1C48D851AAFBC3400398E93 /* AppDelegate.m in Sources */,
 				A1C48D881AAFBC3400398E93 /* FirstViewController.m in Sources */,
@@ -416,6 +427,7 @@
 				FB43A1E01AD442CD00110063 /* PhotoCell.m in Sources */,
 				A1C48D821AAFBC3400398E93 /* main.m in Sources */,
 				A1C48DB31AAFBD5000398E93 /* SixthViewController.m in Sources */,
+				498E1C8B1ADED17000E6C012 /* addPhotoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
