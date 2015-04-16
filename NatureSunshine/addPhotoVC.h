@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *myImageView;
 
 - (IBAction)takeAPhoto:(id)sender;
-
-- (IBAction)selectAPhoto:(id)sender;
+- (IBAction)uploadImage:(id)sender;
 
 @end

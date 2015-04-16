@@ -173,7 +173,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Mm-Pr-dD9">
-                                <rect key="frame" x="41" y="416" width="77" height="30"/>
+                                <rect key="frame" x="16" y="419" width="77" height="30"/>
                                 <state key="normal" title="Take Photo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -202,17 +202,26 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pr-MK-mBm">
-                                <rect key="frame" x="193" y="416" width="88" height="30"/>
+                                <rect key="frame" x="116" y="419" width="88" height="30"/>
                                 <state key="normal" title="Select Photo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="selectAPhoto:" destination="wpQ-vR-7S4" eventType="touchUpInside" id="rnk-II-8SD"/>
+                                    <segue destination="gOG-Xc-8Oa" kind="modal" id="He8-wR-aoP"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SGH-xV-wl2">
-                                <rect key="frame" x="-2" y="64" width="325" height="336"/>
+                                <rect key="frame" x="-2" y="64" width="325" height="347"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpj-D1-t3v">
+                                <rect key="frame" x="231" y="419" width="54" height="30"/>
+                                <state key="normal" title="Upload!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadImage:" destination="wpQ-vR-7S4" eventType="touchUpInside" id="9wk-1g-k2a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -222,7 +231,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAQ-Mw-rpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1017" y="429"/>
+            <point key="canvasLocation" x="-1085" y="665"/>
+        </scene>
+        <!--Select PhotoVC-->
+        <scene sceneID="Co6-kg-pZi">
+            <objects>
+                <viewController id="gOG-Xc-8Oa" customClass="selectPhotoVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yzp-fb-E5M"/>
+                        <viewControllerLayoutGuide type="bottom" id="qkO-Aw-MEI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2dP-mm-261">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3wv-PT-JhA">
+                                <rect key="frame" x="0.0" y="64" width="320" height="360"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DsG-5i-50I">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Select photo from album" id="jNq-NM-FtZ">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Ml8-1s-2qb">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OOT-TL-mMZ">
+                                                <rect key="frame" x="25" y="54" width="35" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleColor" red="0.49840394370000002" green="0.68695608450000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="wpQ-vR-7S4" kind="custom" customClass="DismissSegue" id="u3K-6b-oAW"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7h-RE-TFR">
+                                <rect key="frame" x="198" y="427" width="54" height="30"/>
+                                <state key="normal" title="Upload!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadImage:" destination="gOG-Xc-8Oa" eventType="touchUpInside" id="G8U-p0-mKa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kek-0X-GTF">
+                                <rect key="frame" x="50" y="427" width="90" height="30"/>
+                                <state key="normal" title="Select Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectMyImage:" destination="gOG-Xc-8Oa" eventType="touchUpInside" id="knk-OR-b9C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mySelectImageView" destination="3wv-PT-JhA" id="Bqa-2e-MfB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ofk-gs-wUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-542" y="817"/>
         </scene>
         <!--My Photos-->
         <scene sceneID="fRW-18-jCf">
@@ -314,6 +387,17 @@
                     <view key="view" contentMode="scaleToFill" id="paV-7J-9LW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Odr-rK-m3e">
+                                <rect key="frame" x="21" y="33" width="278" height="29"/>
+                                <segments>
+                                    <segment title="Water"/>
+                                    <segment title="Calories"/>
+                                    <segment title="Weight"/>
+                                </segments>
+                                <color key="tintColor" red="0.50038073475608369" green="0.6932212752525253" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tracker" image="heart-rate.png" id="t10-u7-3zm"/>
@@ -337,6 +421,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="u3K-6b-oAW"/>
         <segue reference="HX0-ZE-IFF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

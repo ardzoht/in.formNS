@@ -1,37 +1,27 @@
 //
-//  addPhotoVC.m
+//  selectPhotoVC.m
 //  NatureSunshine
 //
 //  Created by David Sáenz on 15/04/15.
 //  Copyright (c) 2015 Alex&Dave. All rights reserved.
 //
 
-#import "addPhotoVC.h"
+#import "selectPhotoVC.h"
 
-@interface addPhotoVC ()
+@interface selectPhotoVC ()
 
 @end
 
-@implementation addPhotoVC
+@implementation selectPhotoVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-        UIAlertView *anAlert = [[UIAlertView alloc] initWithTitle:@"Important" message:@"Your device does not count with camera." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        
-        [anAlert show];
-    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
 }
 
 /*
@@ -44,25 +34,21 @@
 }
 */
 
-- (IBAction)takeAPhoto:(id)sender {
-   
+- (IBAction)selectMyImage:(id)sender {
     UIImagePickerController *myPicker = [[UIImagePickerController alloc] init];
     myPicker.delegate = self;
     myPicker.allowsEditing = YES;
-    myPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    myPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     [self presentViewController:myPicker animated:YES completion:NULL];
-    
 }
 
 - (IBAction)uploadImage:(id)sender {
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    UIImage *myImage = info[UIImagePickerControllerEditedImage];
-    self.myImageView.image = myImage;
-    
-    UIImageWriteToSavedPhotosAlbum(myImage, nil, nil, nil);
+    UIImage *mySelectedImage = info[UIImagePickerControllerEditedImage];
+    self.mySelectImageView.image = mySelectedImage;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
@@ -70,5 +56,4 @@
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
-
 @end
