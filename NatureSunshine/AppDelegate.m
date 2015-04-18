@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "addPhotoVC.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @interface AppDelegate ()
 
@@ -23,11 +24,12 @@
     // Initialize Parse.
     [Parse setApplicationId:@"g8R5Q9roTJvxEhGi2nvBCSmMh6BmyC1wYRUsZrlP"
                   clientKey:@"SoojW17ik1j6hyoAHSMfNAtgxsOhmswdmw20EebA"];
-    
+     [PFUser enableRevocableSessionInBackground];
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    return YES;
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                    didFinishLaunchingWithOptions:launchOptions];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -44,12 +46,24 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [FBSDKAppEvents activateApp];
+}
+
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
+}
+
 
 @end
