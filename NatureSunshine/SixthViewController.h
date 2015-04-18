@@ -10,8 +10,21 @@
 
 @interface SixthViewController : UIViewController{
     
+    IBOutlet UILabel *messageForEachSegmented;
 
+    IBOutlet UILabel *optionLabel;
+
+    IBOutlet UITextField *dataTxtField;
+    
+    IBOutlet UISegmentedControl *mySegmentedControl;
+    
 }
+
+- (IBAction)segmentedValue:(id)sender;
+
+- (IBAction)sendTrackerData:(id)sender;
+
+
 
 
 
