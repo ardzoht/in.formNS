@@ -14,6 +14,16 @@
 		49DBDD561ADCC2830051EAA0 /* heart-rate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD521ADCC2830051EAA0 /* heart-rate@2x.png */; };
 		49DBDD571ADCC2830051EAA0 /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD531ADCC2830051EAA0 /* house@2x.png */; };
 		49DBDD581ADCC2830051EAA0 /* people-group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD541ADCC2830051EAA0 /* people-group@2x.png */; };
+		49DBE5301AE2BA5100FEFDB9 /* graphsForTrackerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DBE52F1AE2BA5100FEFDB9 /* graphsForTrackerVC.m */; };
+		49DBE5361AE2BCB800FEFDB9 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DBE5351AE2BCB800FEFDB9 /* TableViewCell.m */; };
+		49DBE5451AE2BDDF00FEFDB9 /* UUBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DBE53A1AE2BDDF00FEFDB9 /* UUBar.m */; };
+		49DBE5461AE2BDDF00FEFDB9 /* UUBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DBE53C1AE2BDDF00FEFDB9 /* UUBarChart.m */; };
+		49DBE5471AE2BDDF00FEFDB9 /* UUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DBE53E1AE2BDDF00FEFDB9 /* UUChart.m */; };
+		49DBE5481AE2BDDF00FEFDB9 /* UUChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DBE5401AE2BDDF00FEFDB9 /* UUChartLabel.m */; };
+		49DBE5491AE2BDDF00FEFDB9 /* UUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DBE5421AE2BDDF00FEFDB9 /* UUColor.m */; };
+		49DBE54A1AE2BDDF00FEFDB9 /* UULineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DBE5441AE2BDDF00FEFDB9 /* UULineChart.m */; };
+		49DBE54C1AE2E5FA00FEFDB9 /* Graph-Chart-iOS7-Icon-cssauthor.com_.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBE54B1AE2E5FA00FEFDB9 /* Graph-Chart-iOS7-Icon-cssauthor.com_.png */; };
+		49DBE54E1AE2E69500FEFDB9 /* Flat_UI_-_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBE54D1AE2E69500FEFDB9 /* Flat_UI_-_retina.png */; };
 		A1C48D821AAFBC3400398E93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C48D811AAFBC3400398E93 /* main.m */; };
 		A1C48D851AAFBC3400398E93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C48D841AAFBC3400398E93 /* AppDelegate.m */; };
 		A1C48D881AAFBC3400398E93 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C48D871AAFBC3400398E93 /* FirstViewController.m */; };
@@ -90,6 +100,24 @@
 		49DBDD521ADCC2830051EAA0 /* heart-rate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-rate@2x.png"; sourceTree = "<group>"; };
 		49DBDD531ADCC2830051EAA0 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
 		49DBDD541ADCC2830051EAA0 /* people-group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "people-group@2x.png"; sourceTree = "<group>"; };
+		49DBE52E1AE2BA5100FEFDB9 /* graphsForTrackerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphsForTrackerVC.h; sourceTree = "<group>"; };
+		49DBE52F1AE2BA5100FEFDB9 /* graphsForTrackerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = graphsForTrackerVC.m; sourceTree = "<group>"; };
+		49DBE5341AE2BCB800FEFDB9 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		49DBE5351AE2BCB800FEFDB9 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		49DBE5391AE2BDDF00FEFDB9 /* UUBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUBar.h; sourceTree = "<group>"; };
+		49DBE53A1AE2BDDF00FEFDB9 /* UUBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUBar.m; sourceTree = "<group>"; };
+		49DBE53B1AE2BDDF00FEFDB9 /* UUBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUBarChart.h; sourceTree = "<group>"; };
+		49DBE53C1AE2BDDF00FEFDB9 /* UUBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUBarChart.m; sourceTree = "<group>"; };
+		49DBE53D1AE2BDDF00FEFDB9 /* UUChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUChart.h; sourceTree = "<group>"; };
+		49DBE53E1AE2BDDF00FEFDB9 /* UUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUChart.m; sourceTree = "<group>"; };
+		49DBE53F1AE2BDDF00FEFDB9 /* UUChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUChartLabel.h; sourceTree = "<group>"; };
+		49DBE5401AE2BDDF00FEFDB9 /* UUChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUChartLabel.m; sourceTree = "<group>"; };
+		49DBE5411AE2BDDF00FEFDB9 /* UUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUColor.h; sourceTree = "<group>"; };
+		49DBE5421AE2BDDF00FEFDB9 /* UUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUColor.m; sourceTree = "<group>"; };
+		49DBE5431AE2BDDF00FEFDB9 /* UULineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UULineChart.h; sourceTree = "<group>"; };
+		49DBE5441AE2BDDF00FEFDB9 /* UULineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UULineChart.m; sourceTree = "<group>"; };
+		49DBE54B1AE2E5FA00FEFDB9 /* Graph-Chart-iOS7-Icon-cssauthor.com_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph-Chart-iOS7-Icon-cssauthor.com_.png"; sourceTree = "<group>"; };
+		49DBE54D1AE2E69500FEFDB9 /* Flat_UI_-_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flat_UI_-_retina.png"; sourceTree = "<group>"; };
 		A1C48D7C1AAFBC3400398E93 /* NatureSunshine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatureSunshine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C48D801AAFBC3400398E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C48D811AAFBC3400398E93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -211,6 +239,25 @@
 			name = "tab-Icons2";
 			sourceTree = "<group>";
 		};
+		49DBE5381AE2BD9800FEFDB9 /* UUChart */ = {
+			isa = PBXGroup;
+			children = (
+				49DBE5391AE2BDDF00FEFDB9 /* UUBar.h */,
+				49DBE53A1AE2BDDF00FEFDB9 /* UUBar.m */,
+				49DBE53B1AE2BDDF00FEFDB9 /* UUBarChart.h */,
+				49DBE53C1AE2BDDF00FEFDB9 /* UUBarChart.m */,
+				49DBE53D1AE2BDDF00FEFDB9 /* UUChart.h */,
+				49DBE53E1AE2BDDF00FEFDB9 /* UUChart.m */,
+				49DBE53F1AE2BDDF00FEFDB9 /* UUChartLabel.h */,
+				49DBE5401AE2BDDF00FEFDB9 /* UUChartLabel.m */,
+				49DBE5411AE2BDDF00FEFDB9 /* UUColor.h */,
+				49DBE5421AE2BDDF00FEFDB9 /* UUColor.m */,
+				49DBE5431AE2BDDF00FEFDB9 /* UULineChart.h */,
+				49DBE5441AE2BDDF00FEFDB9 /* UULineChart.m */,
+			);
+			name = UUChart;
+			sourceTree = "<group>";
+		};
 		A1C48D731AAFBC3400398E93 = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +335,10 @@
 				498E1C8A1ADED17000E6C012 /* addPhotoVC.m */,
 				4992EA941ADF549E00E1EE30 /* selectPhotoVC.h */,
 				4992EA951ADF549E00E1EE30 /* selectPhotoVC.m */,
+				49DBE52E1AE2BA5100FEFDB9 /* graphsForTrackerVC.h */,
+				49DBE52F1AE2BA5100FEFDB9 /* graphsForTrackerVC.m */,
+				49DBE5341AE2BCB800FEFDB9 /* TableViewCell.h */,
+				49DBE5351AE2BCB800FEFDB9 /* TableViewCell.m */,
 			);
 			path = NatureSunshine;
 			sourceTree = "<group>";
@@ -428,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C48DBD1AAFC33700398E93 /* photos.png in Resources */,
+				49DBE54E1AE2E69500FEFDB9 /* Flat_UI_-_retina.png in Resources */,
 				FB43A1E81AD446DD00110063 /* demo_4.jpg in Resources */,
 				A1C48DBE1AAFC33700398E93 /* routines.png in Resources */,
 				A1C48DC01AAFC33700398E93 /* wall.png in Resources */,
@@ -444,6 +496,7 @@
 				A1C48D931AAFBC3400398E93 /* LaunchScreen.xib in Resources */,
 				49DBDD561ADCC2830051EAA0 /* heart-rate@2x.png in Resources */,
 				49DBDD571ADCC2830051EAA0 /* house@2x.png in Resources */,
+				49DBE54C1AE2E5FA00FEFDB9 /* Graph-Chart-iOS7-Icon-cssauthor.com_.png in Resources */,
 				A1C48DBC1AAFC33700398E93 /* group.png in Resources */,
 				FB8046291AE2DF4200038875 /* Danleech-Simple-Facebook.jpg in Resources */,
 				A1C48D901AAFBC3400398E93 /* Images.xcassets in Resources */,
@@ -466,10 +519,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DBE5471AE2BDDF00FEFDB9 /* UUChart.m in Sources */,
 				A1C48D8B1AAFBC3400398E93 /* SecondViewController.m in Sources */,
 				498E1C881ADECFB400E6C012 /* DismissSegue.m in Sources */,
 				A1C48DAA1AAFBD0100398E93 /* ThirdViewController.m in Sources */,
+				49DBE5451AE2BDDF00FEFDB9 /* UUBar.m in Sources */,
+				49DBE5481AE2BDDF00FEFDB9 /* UUChartLabel.m in Sources */,
 				A1C48D851AAFBC3400398E93 /* AppDelegate.m in Sources */,
+				49DBE54A1AE2BDDF00FEFDB9 /* UULineChart.m in Sources */,
 				A1C48D881AAFBC3400398E93 /* FirstViewController.m in Sources */,
 				FB4F04291ABE072F00F4B765 /* PostCell.m in Sources */,
 				FB8046251AE2BF8200038875 /* SignViewController.m in Sources */,

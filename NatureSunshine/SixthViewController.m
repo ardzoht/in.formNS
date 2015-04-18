@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    mySegmentedControl.selectedSegmentIndex = 0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +35,64 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)segmentedValue:(id)sender {
+    if(mySegmentedControl.selectedSegmentIndex == 0){
+        messageForEachSegmented.text = @"How much water did you drink?";
+        optionLabel.text = @"Ounces:";
+        dataTxtField.text = NULL;
+        dataTxtField.placeholder = @"Oz.";
+        confirmationLabel.text = @"Fill the space above, then tap Send";
+        confirmedData.text = NULL;
+    }
+    
+    else if(mySegmentedControl.selectedSegmentIndex == 1){
+        messageForEachSegmented.text = @"How much calories did you consume?";
+        optionLabel.text = @"Calories:";
+        dataTxtField.text = NULL;
+        dataTxtField.placeholder = @"Cals.";
+        confirmationLabel.text = @"Fill the space above, then tap Send";
+        confirmedData.text = NULL;
+    }
+    
+    else if(mySegmentedControl.selectedSegmentIndex == 2){
+        messageForEachSegmented.text = @"What's your actual weight?";
+        optionLabel.text = @"Pounds:";
+        dataTxtField.text = NULL;
+        dataTxtField.placeholder = @"Lbs.";
+        confirmationLabel.text = @"Fill the space above, then tap Send";
+        confirmedData.text = NULL;
+    }
+
+}
+
+- (IBAction)sendTrackerData:(id)sender {
+    double theData;
+    
+    if(mySegmentedControl.selectedSegmentIndex == 0){
+        theData = [dataTxtField.text doubleValue];
+        NSLog(@"%@", dataTxtField.text);
+        NSLog(@"%f", theData);
+        confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
+        confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Oz."];
+    }
+    
+    else if(mySegmentedControl.selectedSegmentIndex == 1){
+        theData = [dataTxtField.text doubleValue];
+        NSLog(@"%@", dataTxtField.text);
+        NSLog(@"%f", theData);
+        confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
+        confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Cals."];
+    }
+    
+    else if(mySegmentedControl.selectedSegmentIndex == 2){
+       theData = [dataTxtField.text doubleValue];
+        NSLog(@"%@", dataTxtField.text);
+        NSLog(@"%f", theData);
+        confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!:"];
+        confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Lbs."];
+    }
+    
+}
 
 @end
