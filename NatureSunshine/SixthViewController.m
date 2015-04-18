@@ -42,6 +42,8 @@
         optionLabel.text = @"Ounces:";
         dataTxtField.text = NULL;
         dataTxtField.placeholder = @"Oz.";
+        confirmationLabel.text = @"Fill the space above, then tap Send";
+        confirmedData.text = NULL;
     }
     
     else if(mySegmentedControl.selectedSegmentIndex == 1){
@@ -49,6 +51,8 @@
         optionLabel.text = @"Calories:";
         dataTxtField.text = NULL;
         dataTxtField.placeholder = @"Cals.";
+        confirmationLabel.text = @"Fill the space above, then tap Send";
+        confirmedData.text = NULL;
     }
     
     else if(mySegmentedControl.selectedSegmentIndex == 2){
@@ -56,6 +60,8 @@
         optionLabel.text = @"Pounds:";
         dataTxtField.text = NULL;
         dataTxtField.placeholder = @"Lbs.";
+        confirmationLabel.text = @"Fill the space above, then tap Send";
+        confirmedData.text = NULL;
     }
 
 }
@@ -66,16 +72,25 @@
     if(mySegmentedControl.selectedSegmentIndex == 0){
         theData = [dataTxtField.text doubleValue];
         NSLog(@"%@", dataTxtField.text);
+        NSLog(@"%f", theData);
+        confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
+        confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Oz."];
     }
     
     else if(mySegmentedControl.selectedSegmentIndex == 1){
         theData = [dataTxtField.text doubleValue];
+        NSLog(@"%@", dataTxtField.text);
         NSLog(@"%f", theData);
+        confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
+        confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Cals."];
     }
     
     else if(mySegmentedControl.selectedSegmentIndex == 2){
        theData = [dataTxtField.text doubleValue];
+        NSLog(@"%@", dataTxtField.text);
         NSLog(@"%f", theData);
+        confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!:"];
+        confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Lbs."];
     }
     
 }

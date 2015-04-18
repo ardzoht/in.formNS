@@ -18,6 +18,9 @@
     
     IBOutlet UISegmentedControl *mySegmentedControl;
     
+    IBOutlet UILabel *confirmationLabel;
+    
+    IBOutlet UILabel *confirmedData;
 }
 
 - (IBAction)segmentedValue:(id)sender;
