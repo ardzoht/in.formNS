@@ -714,13 +714,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ounces:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJT-Ge-s6T">
                                 <rect key="frame" x="16" y="132" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How much water did you drink?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqM-4w-e3G">
                                 <rect key="frame" x="13" y="78" width="295" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7n-VA-I2B">
@@ -834,6 +834,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Flat_UI_-_retina.png" width="234" height="208"/>
+        <image name="Graph-Chart-iOS7-Icon-cssauthor.com_.png" width="366" height="367"/>
         <image name="LogoNS.jpg" width="396" height="344"/>
         <image name="camera-7.png" width="30" height="30"/>
         <image name="demo_1.jpg" width="460" height="276"/>
@@ -850,6 +852,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="dkf-Zk-dSP"/>
         <segue reference="u3K-6b-oAW"/>
+        <segue reference="lex-rI-5u6"/>
+        <segue reference="Whl-IE-mA1"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
 </document>
