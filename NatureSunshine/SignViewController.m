@@ -73,7 +73,7 @@
 
     
     if (_type.selectedSegmentIndex == 0) {
-        NSNumber *isCoach = [NSNumber numberWithInt:1];
+        NSNumber *isCoach = [NSNumber numberWithInt:0];
         [user setObject:isCoach forKey: @"Coach"];
 
     }
