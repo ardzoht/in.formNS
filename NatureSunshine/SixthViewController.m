@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    mySegmentedControl.selectedSegmentIndex = 0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +35,49 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)segmentedValue:(id)sender {
+    if(mySegmentedControl.selectedSegmentIndex == 0){
+        messageForEachSegmented.text = @"How much water did you drink?";
+        optionLabel.text = @"Ounces:";
+        dataTxtField.text = NULL;
+        dataTxtField.placeholder = @"Oz.";
+    }
+    
+    else if(mySegmentedControl.selectedSegmentIndex == 1){
+        messageForEachSegmented.text = @"How much calories did you consume?";
+        optionLabel.text = @"Calories:";
+        dataTxtField.text = NULL;
+        dataTxtField.placeholder = @"Cals.";
+    }
+    
+    else if(mySegmentedControl.selectedSegmentIndex == 2){
+        messageForEachSegmented.text = @"What's your actual weight?";
+        optionLabel.text = @"Pounds:";
+        dataTxtField.text = NULL;
+        dataTxtField.placeholder = @"Lbs.";
+    }
+
+}
+
+- (IBAction)sendTrackerData:(id)sender {
+    double theData;
+    
+    if(mySegmentedControl.selectedSegmentIndex == 0){
+        theData = [dataTxtField.text doubleValue];
+        NSLog(@"%@", dataTxtField.text);
+    }
+    
+    else if(mySegmentedControl.selectedSegmentIndex == 1){
+        theData = [dataTxtField.text doubleValue];
+        NSLog(@"%f", theData);
+    }
+    
+    else if(mySegmentedControl.selectedSegmentIndex == 2){
+       theData = [dataTxtField.text doubleValue];
+        NSLog(@"%f", theData);
+    }
+    
+}
 
 @end
