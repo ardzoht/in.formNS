@@ -87,8 +87,15 @@
         if ( !error ) {
             NSString * storyboardName = @"Main";
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+            
+            if(_type.selectedSegmentIndex == 0) {
+            UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"configVC"];
+            [self presentViewController:vc animated:YES completion:nil];
+            }
+            else {
             UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"homeVC"];
             [self presentViewController:vc animated:YES completion:nil];
+            }
         } else {
             NSString *errorStr = [error userInfo][@"error"];
             NSLog(@"Error: %@", errorStr);
