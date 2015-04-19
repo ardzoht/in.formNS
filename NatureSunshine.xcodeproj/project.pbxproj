@@ -49,12 +49,6 @@
 		BB7AC71F1AD5C30400B727DB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7AC7161AD5C30400B727DB /* StoreKit.framework */; };
 		BB7AC7201AD5C30400B727DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7AC7171AD5C30400B727DB /* SystemConfiguration.framework */; };
 		FB4341401AE319D70014F7B7 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB43413F1AE319D70014F7B7 /* ConfigViewController.m */; };
-		FB43414E1AE31D7E0014F7B7 /* UUBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4341431AE31D7E0014F7B7 /* UUBar.m */; };
-		FB43414F1AE31D7E0014F7B7 /* UUBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4341451AE31D7E0014F7B7 /* UUBarChart.m */; };
-		FB4341501AE31D7E0014F7B7 /* UUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4341471AE31D7E0014F7B7 /* UUChart.m */; };
-		FB4341511AE31D7E0014F7B7 /* UUChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4341491AE31D7E0014F7B7 /* UUChartLabel.m */; };
-		FB4341521AE31D7E0014F7B7 /* UUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FB43414B1AE31D7E0014F7B7 /* UUColor.m */; };
-		FB4341531AE31D7E0014F7B7 /* UULineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FB43414D1AE31D7E0014F7B7 /* UULineChart.m */; };
 		FB4341541AE328B70014F7B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C48D8C1AAFBC3400398E93 /* Main.storyboard */; };
 		FB43A1E01AD442CD00110063 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB43A1DF1AD442CD00110063 /* PhotoCell.m */; };
 		FB43A1E51AD446DD00110063 /* demo_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB43A1E11AD446DD00110063 /* demo_1.jpg */; };
@@ -72,6 +66,12 @@
 		FB80463C1AE2E18A00038875 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8046391AE2E18A00038875 /* FBSDKCoreKit.framework */; };
 		FB80463D1AE2E18A00038875 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB80463A1AE2E18A00038875 /* FBSDKLoginKit.framework */; };
 		FB80463E1AE2E18A00038875 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB80463B1AE2E18A00038875 /* FBSDKShareKit.framework */; };
+		FBFF7FEA1AE35E2300C95775 /* UUBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFF7FDF1AE35E2300C95775 /* UUBar.m */; };
+		FBFF7FEB1AE35E2300C95775 /* UUBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFF7FE11AE35E2300C95775 /* UUBarChart.m */; };
+		FBFF7FEC1AE35E2300C95775 /* UUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFF7FE31AE35E2300C95775 /* UUChart.m */; };
+		FBFF7FED1AE35E2300C95775 /* UUChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFF7FE51AE35E2300C95775 /* UUChartLabel.m */; };
+		FBFF7FEE1AE35E2300C95775 /* UUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFF7FE71AE35E2300C95775 /* UUColor.m */; };
+		FBFF7FEF1AE35E2300C95775 /* UULineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFF7FE91AE35E2300C95775 /* UULineChart.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,18 +146,6 @@
 		BB7AC7171AD5C30400B727DB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FB43413E1AE319D70014F7B7 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
 		FB43413F1AE319D70014F7B7 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
-		FB4341421AE31D7E0014F7B7 /* UUBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUBar.h; path = ../../Downloads/in.formNSDave/UUBar.h; sourceTree = "<group>"; };
-		FB4341431AE31D7E0014F7B7 /* UUBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUBar.m; path = ../../Downloads/in.formNSDave/UUBar.m; sourceTree = "<group>"; };
-		FB4341441AE31D7E0014F7B7 /* UUBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUBarChart.h; path = ../../Downloads/in.formNSDave/UUBarChart.h; sourceTree = "<group>"; };
-		FB4341451AE31D7E0014F7B7 /* UUBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUBarChart.m; path = ../../Downloads/in.formNSDave/UUBarChart.m; sourceTree = "<group>"; };
-		FB4341461AE31D7E0014F7B7 /* UUChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUChart.h; path = ../../Downloads/in.formNSDave/UUChart.h; sourceTree = "<group>"; };
-		FB4341471AE31D7E0014F7B7 /* UUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUChart.m; path = ../../Downloads/in.formNSDave/UUChart.m; sourceTree = "<group>"; };
-		FB4341481AE31D7E0014F7B7 /* UUChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUChartLabel.h; path = ../../Downloads/in.formNSDave/UUChartLabel.h; sourceTree = "<group>"; };
-		FB4341491AE31D7E0014F7B7 /* UUChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUChartLabel.m; path = ../../Downloads/in.formNSDave/UUChartLabel.m; sourceTree = "<group>"; };
-		FB43414A1AE31D7E0014F7B7 /* UUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UUColor.h; path = ../../Downloads/in.formNSDave/UUColor.h; sourceTree = "<group>"; };
-		FB43414B1AE31D7E0014F7B7 /* UUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UUColor.m; path = ../../Downloads/in.formNSDave/UUColor.m; sourceTree = "<group>"; };
-		FB43414C1AE31D7E0014F7B7 /* UULineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UULineChart.h; path = ../../Downloads/in.formNSDave/UULineChart.h; sourceTree = "<group>"; };
-		FB43414D1AE31D7E0014F7B7 /* UULineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UULineChart.m; path = ../../Downloads/in.formNSDave/UULineChart.m; sourceTree = "<group>"; };
 		FB43A1DE1AD442CD00110063 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
 		FB43A1DF1AD442CD00110063 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 		FB43A1E11AD446DD00110063 /* demo_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo_1.jpg; sourceTree = "<group>"; };
@@ -178,6 +166,18 @@
 		FB8046391AE2E18A00038875 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		FB80463A1AE2E18A00038875 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		FB80463B1AE2E18A00038875 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		FBFF7FDE1AE35E2300C95775 /* UUBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUBar.h; sourceTree = "<group>"; };
+		FBFF7FDF1AE35E2300C95775 /* UUBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUBar.m; sourceTree = "<group>"; };
+		FBFF7FE01AE35E2300C95775 /* UUBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUBarChart.h; sourceTree = "<group>"; };
+		FBFF7FE11AE35E2300C95775 /* UUBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUBarChart.m; sourceTree = "<group>"; };
+		FBFF7FE21AE35E2300C95775 /* UUChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUChart.h; sourceTree = "<group>"; };
+		FBFF7FE31AE35E2300C95775 /* UUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUChart.m; sourceTree = "<group>"; };
+		FBFF7FE41AE35E2300C95775 /* UUChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUChartLabel.h; sourceTree = "<group>"; };
+		FBFF7FE51AE35E2300C95775 /* UUChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUChartLabel.m; sourceTree = "<group>"; };
+		FBFF7FE61AE35E2300C95775 /* UUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUColor.h; sourceTree = "<group>"; };
+		FBFF7FE71AE35E2300C95775 /* UUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUColor.m; sourceTree = "<group>"; };
+		FBFF7FE81AE35E2300C95775 /* UULineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UULineChart.h; sourceTree = "<group>"; };
+		FBFF7FE91AE35E2300C95775 /* UULineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UULineChart.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,18 +360,18 @@
 		FB4341411AE31D640014F7B7 /* UUChart */ = {
 			isa = PBXGroup;
 			children = (
-				FB4341421AE31D7E0014F7B7 /* UUBar.h */,
-				FB4341431AE31D7E0014F7B7 /* UUBar.m */,
-				FB4341441AE31D7E0014F7B7 /* UUBarChart.h */,
-				FB4341451AE31D7E0014F7B7 /* UUBarChart.m */,
-				FB4341461AE31D7E0014F7B7 /* UUChart.h */,
-				FB4341471AE31D7E0014F7B7 /* UUChart.m */,
-				FB4341481AE31D7E0014F7B7 /* UUChartLabel.h */,
-				FB4341491AE31D7E0014F7B7 /* UUChartLabel.m */,
-				FB43414A1AE31D7E0014F7B7 /* UUColor.h */,
-				FB43414B1AE31D7E0014F7B7 /* UUColor.m */,
-				FB43414C1AE31D7E0014F7B7 /* UULineChart.h */,
-				FB43414D1AE31D7E0014F7B7 /* UULineChart.m */,
+				FBFF7FDE1AE35E2300C95775 /* UUBar.h */,
+				FBFF7FDF1AE35E2300C95775 /* UUBar.m */,
+				FBFF7FE01AE35E2300C95775 /* UUBarChart.h */,
+				FBFF7FE11AE35E2300C95775 /* UUBarChart.m */,
+				FBFF7FE21AE35E2300C95775 /* UUChart.h */,
+				FBFF7FE31AE35E2300C95775 /* UUChart.m */,
+				FBFF7FE41AE35E2300C95775 /* UUChartLabel.h */,
+				FBFF7FE51AE35E2300C95775 /* UUChartLabel.m */,
+				FBFF7FE61AE35E2300C95775 /* UUColor.h */,
+				FBFF7FE71AE35E2300C95775 /* UUColor.m */,
+				FBFF7FE81AE35E2300C95775 /* UULineChart.h */,
+				FBFF7FE91AE35E2300C95775 /* UULineChart.m */,
 			);
 			name = UUChart;
 			sourceTree = "<group>";
@@ -511,19 +511,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C48D8B1AAFBC3400398E93 /* SecondViewController.m in Sources */,
-				FB4341521AE31D7E0014F7B7 /* UUColor.m in Sources */,
 				498E1C881ADECFB400E6C012 /* DismissSegue.m in Sources */,
-				FB4341531AE31D7E0014F7B7 /* UULineChart.m in Sources */,
 				A1C48DAA1AAFBD0100398E93 /* ThirdViewController.m in Sources */,
-				FB4341501AE31D7E0014F7B7 /* UUChart.m in Sources */,
-				FB43414E1AE31D7E0014F7B7 /* UUBar.m in Sources */,
+				FBFF7FED1AE35E2300C95775 /* UUChartLabel.m in Sources */,
+				FBFF7FEF1AE35E2300C95775 /* UULineChart.m in Sources */,
 				A1C48D851AAFBC3400398E93 /* AppDelegate.m in Sources */,
-				FB43414F1AE31D7E0014F7B7 /* UUBarChart.m in Sources */,
 				A1C48D881AAFBC3400398E93 /* FirstViewController.m in Sources */,
+				FBFF7FEE1AE35E2300C95775 /* UUColor.m in Sources */,
 				FB4F04291ABE072F00F4B765 /* PostCell.m in Sources */,
-				FB4341511AE31D7E0014F7B7 /* UUChartLabel.m in Sources */,
+				FBFF7FEA1AE35E2300C95775 /* UUBar.m in Sources */,
 				FB8046251AE2BF8200038875 /* SignViewController.m in Sources */,
+				FBFF7FEB1AE35E2300C95775 /* UUBarChart.m in Sources */,
 				FB43A1E01AD442CD00110063 /* PhotoCell.m in Sources */,
+				FBFF7FEC1AE35E2300C95775 /* UUChart.m in Sources */,
 				4992EA961ADF549E00E1EE30 /* selectPhotoVC.m in Sources */,
 				FB8046221AE2B69C00038875 /* LoginViewController.m in Sources */,
 				A1C48D821AAFBC3400398E93 /* main.m in Sources */,
