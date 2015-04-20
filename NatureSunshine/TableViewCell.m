@@ -10,6 +10,7 @@
 #import "UUChart.h"
 
 @interface TableViewCell ()<UUChartDataSource>
+
 {
     NSIndexPath *path;
     UUChart *chartView;

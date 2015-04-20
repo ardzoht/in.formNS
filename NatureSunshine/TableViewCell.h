@@ -10,7 +10,6 @@
 
 @interface TableViewCell : UITableViewCell
 
-
 - (void)configUI:(NSIndexPath *)indexPath;
 
 @end
