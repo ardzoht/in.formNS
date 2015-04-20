@@ -48,7 +48,7 @@
 		BB7AC71E1AD5C30400B727DB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7AC7151AD5C30400B727DB /* Security.framework */; };
 		BB7AC71F1AD5C30400B727DB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7AC7161AD5C30400B727DB /* StoreKit.framework */; };
 		BB7AC7201AD5C30400B727DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7AC7171AD5C30400B727DB /* SystemConfiguration.framework */; };
-		FB4341401AE319D70014F7B7 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB43413F1AE319D70014F7B7 /* ConfigViewController.m */; };
+		FB0739EF1AE4BD3F00F0DD2F /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0739EE1AE4BD3F00F0DD2F /* ConfigViewController.m */; };
 		FB4341541AE328B70014F7B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C48D8C1AAFBC3400398E93 /* Main.storyboard */; };
 		FB43A1E01AD442CD00110063 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB43A1DF1AD442CD00110063 /* PhotoCell.m */; };
 		FB43A1E51AD446DD00110063 /* demo_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB43A1E11AD446DD00110063 /* demo_1.jpg */; };
@@ -144,8 +144,8 @@
 		BB7AC7151AD5C30400B727DB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BB7AC7161AD5C30400B727DB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BB7AC7171AD5C30400B727DB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		FB43413E1AE319D70014F7B7 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
-		FB43413F1AE319D70014F7B7 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		FB0739ED1AE4BD3F00F0DD2F /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		FB0739EE1AE4BD3F00F0DD2F /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
 		FB43A1DE1AD442CD00110063 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
 		FB43A1DF1AD442CD00110063 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 		FB43A1E11AD446DD00110063 /* demo_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo_1.jpg; sourceTree = "<group>"; };
@@ -287,8 +287,6 @@
 				A1C48D891AAFBC3400398E93 /* SecondViewController.h */,
 				A1C48D8A1AAFBC3400398E93 /* SecondViewController.m */,
 				A1C48D8C1AAFBC3400398E93 /* Main.storyboard */,
-				FB43413E1AE319D70014F7B7 /* ConfigViewController.h */,
-				FB43413F1AE319D70014F7B7 /* ConfigViewController.m */,
 				FB8046231AE2BF8200038875 /* SignViewController.h */,
 				FB8046241AE2BF8200038875 /* SignViewController.m */,
 				FB8046201AE2B69C00038875 /* LoginViewController.h */,
@@ -314,6 +312,8 @@
 				49DBE52F1AE2BA5100FEFDB9 /* graphsForTrackerVC.m */,
 				49DBE5341AE2BCB800FEFDB9 /* TableViewCell.h */,
 				49DBE5351AE2BCB800FEFDB9 /* TableViewCell.m */,
+				FB0739ED1AE4BD3F00F0DD2F /* ConfigViewController.h */,
+				FB0739EE1AE4BD3F00F0DD2F /* ConfigViewController.m */,
 			);
 			path = NatureSunshine;
 			sourceTree = "<group>";
@@ -512,6 +512,7 @@
 			files = (
 				A1C48D8B1AAFBC3400398E93 /* SecondViewController.m in Sources */,
 				498E1C881ADECFB400E6C012 /* DismissSegue.m in Sources */,
+				FB0739EF1AE4BD3F00F0DD2F /* ConfigViewController.m in Sources */,
 				A1C48DAA1AAFBD0100398E93 /* ThirdViewController.m in Sources */,
 				FBFF7FED1AE35E2300C95775 /* UUChartLabel.m in Sources */,
 				FBFF7FEF1AE35E2300C95775 /* UULineChart.m in Sources */,
@@ -528,7 +529,6 @@
 				FB8046221AE2B69C00038875 /* LoginViewController.m in Sources */,
 				A1C48D821AAFBC3400398E93 /* main.m in Sources */,
 				A1C48DB31AAFBD5000398E93 /* SixthViewController.m in Sources */,
-				FB4341401AE319D70014F7B7 /* ConfigViewController.m in Sources */,
 				498E1C8B1ADED17000E6C012 /* addPhotoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

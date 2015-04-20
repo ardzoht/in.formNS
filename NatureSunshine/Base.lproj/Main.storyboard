@@ -309,6 +309,7 @@
                         <outlet property="signButton" destination="MXt-j6-d5e" id="IVc-8D-JIX"/>
                         <outlet property="type" destination="nhC-ye-fs7" id="L2V-3C-Hzy"/>
                         <outlet property="userText" destination="eq9-FE-JSZ" id="Cbd-Cm-RQx"/>
+                        <segue destination="af9-CW-7Uz" kind="push" id="qQT-6d-zMO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqE-Pv-p9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -316,46 +317,103 @@
             <point key="canvasLocation" x="-528" y="-1437"/>
         </scene>
         <!--Config View Controller-->
-        <scene sceneID="PCR-dF-edP">
+        <scene sceneID="vVw-QN-rDw">
             <objects>
-                <viewController storyboardIdentifier="configVC" id="v77-M0-NZT" customClass="ConfigViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="configVC" id="af9-CW-7Uz" customClass="ConfigViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6Yh-xy-Fqd"/>
-                        <viewControllerLayoutGuide type="bottom" id="tqX-4l-VVt"/>
+                        <viewControllerLayoutGuide type="top" id="hHb-wd-NHP"/>
+                        <viewControllerLayoutGuide type="bottom" id="x0T-vb-8cb"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="K7H-nb-BbR">
+                    <view key="view" contentMode="scaleToFill" id="NTE-0H-lMa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EXf-vS-OhO">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Djl-kN-Erx">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="Setup" id="OEx-TY-Xyx"/>
+                                    <navigationItem title="Setup" id="7t2-yW-KmZ"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPx-4Q-Xzj">
-                                <rect key="frame" x="16" y="90" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's begin! " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AC3-2z-vob">
-                                <rect key="frame" x="86" y="264" width="277" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="textColor" red="0.38066208964646464" green="0.38066208964646464" blue="0.38066208964646464" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="bYP-2x-W8O">
-                                <rect key="frame" x="0.0" y="345" width="320" height="37"/>
-                                <color key="backgroundColor" red="0.46413024007998777" green="0.40964871459842095" blue="0.53045064210891724" alpha="1" colorSpace="calibratedRGB"/>
-                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7YF-rB-oKK">
+                                <rect key="frame" x="16" y="64" width="297" height="504"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XgA-N4-nC2">
+                                        <rect key="frame" x="147" y="47" width="130" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How much water do you drink a day?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSS-Tf-Mq6">
+                                        <rect key="frame" x="4" y="89" width="287" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1411764771" green="0.4156863093" blue="0.14509804549999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tell us about yourself..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXK-eT-YeM">
+                                        <rect key="frame" x="4" y="7" width="177" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1411764771" green="0.4156863093" blue="0.14509804549999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter text here..." translatesAutoresizingMaskIntoConstraints="NO" id="N23-QF-rZO">
+                                        <rect key="frame" x="20" y="229" width="240" height="78"/>
+                                        <color key="backgroundColor" red="0.92868134469696961" green="0.92868134469696961" blue="0.92868134469696961" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who is your coach?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftp-Du-gWC">
+                                        <rect key="frame" x="64" y="322" width="153" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1411764771" green="0.4156863093" blue="0.14509804549999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fO2-hE-N32">
+                                        <rect key="frame" x="-20" y="329" width="320" height="162"/>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are your in.FORM's objectives?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTw-nH-fef">
+                                        <rect key="frame" x="4" y="170" width="285" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.058823533359999999" green="0.43529415129999999" blue="0.15294118230000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uDG-tq-aiV">
+                                        <rect key="frame" x="4" y="47" width="130" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnh-Bz-Wr1">
+                                        <rect key="frame" x="109" y="486" width="62" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" red="0.7607843876" green="0.054901964960000001" blue="0.1098039299" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1KY-bg-kpf">
+                                        <rect key="frame" x="28" y="134" width="237" height="29"/>
+                                        <segments>
+                                            <segment title="Not much"/>
+                                            <segment title="Regular"/>
+                                            <segment title="A ton"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Dev-dW-voW"/>
+                    <connections>
+                        <outlet property="coaches" destination="fO2-hE-N32" id="adc-Zu-dju"/>
+                        <outlet property="heightText" destination="uDG-tq-aiV" id="4Pn-gs-CpQ"/>
+                        <outlet property="objectiveText" destination="N23-QF-rZO" id="xi8-zm-fd9"/>
+                        <outlet property="send" destination="Vnh-Bz-Wr1" id="J1k-FD-EgP"/>
+                        <outlet property="waterTrack" destination="1KY-bg-kpf" id="sUs-d7-2EF"/>
+                        <outlet property="weightText" destination="XgA-N4-nC2" id="gm5-YA-IwS"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BRE-X1-Yr1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfm-iV-l8J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-123" y="-1507"/>
+            <point key="canvasLocation" x="-111" y="-1905"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="PsF-oT-WAp">
@@ -926,9 +984,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="u3K-6b-oAW"/>
         <segue reference="m9y-ca-xo6"/>
         <segue reference="dkf-Zk-dSP"/>
-        <segue reference="u3K-6b-oAW"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
 </document>
