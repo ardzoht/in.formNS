@@ -9,30 +9,63 @@
 #import "ConfigViewController.h"
 #import <Parse/Parse.h>
 
-@interface ConfigViewController ()
+@interface ConfigViewController () {
+    NSMutableArray *arrayCoaches;
+}
 
 @end
 
 @implementation ConfigViewController
 
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.coaches.delegate = self;
+    self.coaches.dataSource = self;
     // Do any additional setup after loading the view.
+    arrayCoaches  =[[NSMutableArray alloc]init];
+    
+
+    PFQuery *queryCoaches = [PFUser query];
+    [queryCoaches whereKey:@"Coach" equalTo:[NSNumber numberWithInt:1]];
+    [queryCoaches selectKeys:@[@"username"]];
+    [queryCoaches findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                [arrayCoaches addObject:object[@"username"]];
+                [self.coaches reloadAllComponents];
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// The number of columns of data
+- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+// The number of rows of data
+- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return arrayCoaches.count;
+}
+
+// The data to return for the row and component (column) that's being passed in
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return arrayCoaches[row];
 }
 
 /*
@@ -44,5 +77,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

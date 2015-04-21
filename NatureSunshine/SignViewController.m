@@ -81,7 +81,7 @@
         NSNumber *isCoach = [NSNumber numberWithInt:1];
         [user setObject:isCoach forKey: @"Coach"];
     }
-
+    
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if ( !error ) {
