@@ -50,6 +50,7 @@
 		BB7AC71F1AD5C30400B727DB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7AC7161AD5C30400B727DB /* StoreKit.framework */; };
 		BB7AC7201AD5C30400B727DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7AC7171AD5C30400B727DB /* SystemConfiguration.framework */; };
 		BBDAE3611AE7FB1C00F9CF97 /* MemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDAE3601AE7FB1C00F9CF97 /* MemberCell.m */; };
+		BBDAE3631AE83D4300F9CF97 /* profile-pic.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDAE3621AE83D4300F9CF97 /* profile-pic.png */; };
 		FB0739EF1AE4BD3F00F0DD2F /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0739EE1AE4BD3F00F0DD2F /* ConfigViewController.m */; };
 		FB4341541AE328B70014F7B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C48D8C1AAFBC3400398E93 /* Main.storyboard */; };
 		FB43A1E01AD442CD00110063 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB43A1DF1AD442CD00110063 /* PhotoCell.m */; };
@@ -148,6 +149,7 @@
 		BB7AC7171AD5C30400B727DB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BBDAE35F1AE7FB1C00F9CF97 /* MemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberCell.h; sourceTree = "<group>"; };
 		BBDAE3601AE7FB1C00F9CF97 /* MemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberCell.m; sourceTree = "<group>"; };
+		BBDAE3621AE83D4300F9CF97 /* profile-pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-pic.png"; sourceTree = "<group>"; };
 		FB0739ED1AE4BD3F00F0DD2F /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
 		FB0739EE1AE4BD3F00F0DD2F /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
 		FB43A1DE1AD442CD00110063 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				FB43A1E11AD446DD00110063 /* demo_1.jpg */,
 				FB43A1E21AD446DD00110063 /* demo_2.jpg */,
 				FB43A1E31AD446DD00110063 /* demo_3.jpg */,
+				BBDAE3621AE83D4300F9CF97 /* profile-pic.png */,
 				FB43A1E41AD446DD00110063 /* demo_4.jpg */,
 				FB4F04221ABE061D00F4B765 /* natures-sunshine.gif */,
 			);
@@ -498,6 +501,7 @@
 				FB8046291AE2DF4200038875 /* Danleech-Simple-Facebook.jpg in Resources */,
 				A1C48D901AAFBC3400398E93 /* Images.xcassets in Resources */,
 				FB43A1E71AD446DD00110063 /* demo_3.jpg in Resources */,
+				BBDAE3631AE83D4300F9CF97 /* profile-pic.png in Resources */,
 				FB43A1E61AD446DD00110063 /* demo_2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

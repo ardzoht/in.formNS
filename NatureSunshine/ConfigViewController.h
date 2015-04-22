@@ -8,16 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ConfigViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface ConfigViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *heightText;
 @property (weak, nonatomic) IBOutlet UITextField *weightText;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *waterTrack;
-@property (weak, nonatomic) IBOutlet UITextView *objectiveText;
+@property (weak, nonatomic) IBOutlet UILabel *usernameDisplay;
+@property (weak, nonatomic) IBOutlet UIImageView *profileView;
+
 @property (weak, nonatomic) IBOutlet UIPickerView *coaches;
 @property (weak, nonatomic) IBOutlet UIButton *send;
 
 - (IBAction)setupUser:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *changePic;
+- (IBAction)setPic:(id)sender;
 
 
 @end

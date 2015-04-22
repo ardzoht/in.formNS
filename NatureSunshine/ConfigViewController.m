@@ -12,6 +12,7 @@
 @interface ConfigViewController () {
     NSMutableArray *arrayCoaches;
     NSString *coach;
+    PFFile *imageFile;
 }
 
 @end
@@ -43,6 +44,9 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
+    
+    self.usernameDisplay.text = [[PFUser currentUser] username];
+
 
 }
 
@@ -95,6 +99,10 @@
     PFObject *coachGroup = [PFObject objectWithClassName:@"CoachGroups"];
     coachGroup[@"user"] = user;
     coachGroup[@"coach"] = coach;
+    NSData *data = UIImageJPEGRepresentation(self.profileView.image, 0.5f);
+    
+    imageFile = [PFFile fileWithName:@"Image.jpg" data:data];
+    coachGroup[@"profilePic"] = imageFile;
     [coachGroup saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(succeeded) {
             //Object saved
@@ -105,5 +113,22 @@
         }
     }];
     
+}
+
+- (IBAction)setPic:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *selectedImage = info[UIImagePickerControllerEditedImage];
+    self.profileView.image = selectedImage;
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 @end

@@ -9,8 +9,9 @@
 #import "SecondViewController.h"
 #import "MemberCell.h"
 #import <Parse/Parse.h>
-@interface SecondViewController ()
-
+@interface SecondViewController () {
+    UIImage *image;
+}
 @end
 
 @implementation SecondViewController
@@ -26,7 +27,7 @@
     
     PFQuery *group = [PFQuery queryWithClassName:@"CoachGroups"];
     [group whereKey:@"coach" equalTo:coachString];
-    [group selectKeys:@[@"user"]];
+    [group selectKeys:@[@"user", @"profilePic"]];
     [group findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
@@ -55,11 +56,21 @@
 {
     static NSString *CellIdentifier = @"memberCell";
     MemberCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
+    PFObject *imageObject = [members objectAtIndex:indexPath.row];
+    PFFile *imageFile = [imageObject objectForKey:@"profilePic"];
+    
+    [self.loadingSpinner startAnimating];
+    self.loadingSpinner.hidden = NO;
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (!error) {
+            cell.profilePic.image = [UIImage imageWithData:data];
+            
+        }
+    }];
     
     cell.username.text = members[indexPath.row][@"user"];
-    cell.profilePic.image = [UIImage imageNamed:@"natures-sunshine.gif"];
-    
+    [self.loadingSpinner stopAnimating];
+    self.loadingSpinner.hidden = YES;
     return cell;
 }
 

@@ -11,10 +11,12 @@
 @interface SecondViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     NSArray *members;
     NSString *coachString;
+    
 }
 
 
 @property (weak, nonatomic) IBOutlet UITableView *groupView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingSpinner;
 
 
 @end
