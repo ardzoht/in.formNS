@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SixthViewController : UIViewController{
+@interface SixthViewController : UIViewController<UITextFieldDelegate, UIAlertViewDelegate>{
     
     IBOutlet UILabel *messageForEachSegmented;
 
