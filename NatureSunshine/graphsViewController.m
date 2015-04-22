@@ -1,21 +1,21 @@
 //
-//  theGraphsForTracker.m
+//  graphsViewController.m
 //  NatureSunshine
 //
-//  Created by David Sáenz on 20/04/15.
+//  Created by David Sáenz on 22/04/15.
 //  Copyright (c) 2015 Alex&Dave. All rights reserved.
 //
 
-#import "theGraphsForTracker.h"
+#import "graphsViewController.h"
 #import "TableViewCell.h"
 
-@interface theGraphsForTracker () <UITableViewDataSource,UITableViewDelegate>
+@interface graphsViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
 
-@implementation theGraphsForTracker
+@implementation graphsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,7 +32,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *cellIdentifier = @"TableViewCell";
+    static NSString *cellIdentifier = @"TableViewCell";
     
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
@@ -67,5 +67,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SixthViewController : UIViewController{
+@interface SixthViewController : UIViewController<UITextFieldDelegate, UIAlertViewDelegate>{
     
     IBOutlet UILabel *messageForEachSegmented;
 
@@ -27,6 +27,7 @@
 
 - (IBAction)sendTrackerData:(id)sender;
 
+- (IBAction)showGraphs:(id)sender;
 
 
 

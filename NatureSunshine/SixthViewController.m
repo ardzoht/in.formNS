@@ -7,6 +7,8 @@
 //
 
 #import "SixthViewController.h"
+#import "graphsViewController.h"
+#import <Parse/Parse.h>
 
 @interface SixthViewController ()
 
@@ -19,6 +21,8 @@
     // Do any additional setup after loading the view.
     
     mySegmentedControl.selectedSegmentIndex = 0;
+    
+     dataTxtField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,6 +79,24 @@
         NSLog(@"%f", theData);
         confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
         confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Oz."];
+        
+        NSNumber *myData = [NSNumber numberWithDouble:theData];
+        
+        PFUser *currentUser = [PFUser currentUser];
+        PFObject *dataSent = [PFObject objectWithClassName:@"Water"];
+    
+        dataSent[@"nOunces"] = myData;
+        dataSent[@"username"] = currentUser.username;
+        
+        [dataSent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                NSLog(@"Data uploaded");
+            } else {
+                UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Something went wrong..." message:@"Ther was an error while uploading your data. Please, try again." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+                [myAlert show];
+            }
+        }];
+        
     }
     
     else if(mySegmentedControl.selectedSegmentIndex == 1){
@@ -83,6 +105,23 @@
         NSLog(@"%f", theData);
         confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
         confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Cals."];
+        
+        NSNumber *myData = [NSNumber numberWithDouble:theData];
+        
+        PFUser *currentUser = [PFUser currentUser];
+        PFObject *dataSent = [PFObject objectWithClassName:@"Calories"];
+        
+        dataSent[@"nCalories"] = myData;
+        dataSent[@"username"] = currentUser.username;
+        
+        [dataSent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                NSLog(@"Data uploaded");
+            } else {
+                UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Something went wrong..." message:@"Ther was an error while uploading your data. Please, try again." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+                [myAlert show];
+            }
+        }];
     }
     
     else if(mySegmentedControl.selectedSegmentIndex == 2){
@@ -91,8 +130,39 @@
         NSLog(@"%f", theData);
         confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!:"];
         confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Lbs."];
+        
+        NSNumber *myData = [NSNumber numberWithDouble:theData];
+        
+        PFUser *currentUser = [PFUser currentUser];
+        PFObject *dataSent = [PFObject objectWithClassName:@"Weight"];
+        
+        dataSent[@"nPounds"] = myData;
+        dataSent[@"username"] = currentUser.username;
+        
+        [dataSent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                NSLog(@"Data uploaded");
+            } else {
+                UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Something went wrong..." message:@"Ther was an error while uploading your data. Please, try again." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+                [myAlert show];
+            }
+        }];
     }
     
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    if(textField == dataTxtField){
+        [dataTxtField resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
+- (IBAction)showGraphs:(id)sender {
+    
+    graphsViewController *myGraphs = [[graphsViewController alloc] init];
+    [self presentViewController:myGraphs animated:YES completion:nil];
 }
 
 @end

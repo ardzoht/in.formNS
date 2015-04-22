@@ -63,7 +63,7 @@
         [_passwordText resignFirstResponder];
     }
     else if(textField == _mailText) {
-        [_mailText becomeFirstResponder];
+        [_passwordText becomeFirstResponder];
     }
     return YES;
 }
