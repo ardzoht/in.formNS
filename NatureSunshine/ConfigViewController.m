@@ -11,6 +11,7 @@
 
 @interface ConfigViewController () {
     NSMutableArray *arrayCoaches;
+    NSString *coach;
 }
 
 @end
@@ -68,6 +69,16 @@
     return arrayCoaches[row];
 }
 
+// Capture the picker view selection
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    // This method is triggered whenever the user makes a change to the picker selection.
+    // The parameter named row and component represents what was selected.
+    if(pickerView == self.coaches) {
+        coach = [arrayCoaches objectAtIndex:row];
+    }
+    
+}
 /*
 #pragma mark - Navigation
 
@@ -79,4 +90,20 @@
 */
 
 
+- (IBAction)setupUser:(id)sender {
+    NSString *user = [[PFUser currentUser] username];
+    PFObject *coachGroup = [PFObject objectWithClassName:@"CoachGroups"];
+    coachGroup[@"user"] = user;
+    coachGroup[@"coach"] = coach;
+    [coachGroup saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(succeeded) {
+            //Object saved
+            NSLog(@"Saved coach group successfully");
+        } else {
+            //There was an error
+            NSLog(@"There was an error saving the object");
+        }
+    }];
+    
+}
 @end

@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    NSArray *members;
+    NSString *coachString;
+}
+
+
+@property (weak, nonatomic) IBOutlet UITableView *groupView;
 
 
 @end

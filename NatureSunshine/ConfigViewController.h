@@ -17,5 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *coaches;
 @property (weak, nonatomic) IBOutlet UIButton *send;
 
+- (IBAction)setupUser:(id)sender;
+
 
 @end
