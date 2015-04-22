@@ -1,5 +1,5 @@
 //
-//  TableViewCell.h
+//  graphsViewController.h
 //  NatureSunshine
 //
 //  Created by David Sáenz on 22/04/15.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewCell : UITableViewCell
+@interface graphsViewController : UIViewController
 
-- (void)configUI:(NSIndexPath *)indexPath;
 
 @end

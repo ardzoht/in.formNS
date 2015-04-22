@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		496B08FB1AE57D2C007BC24C /* theGraphsForTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B08FA1AE57D2C007BC24C /* theGraphsForTracker.m */; };
+		496549B21AE81817009745CA /* graphsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496549B11AE81817009745CA /* graphsViewController.xib */; };
+		496549B51AE8183F009745CA /* graphsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496549B41AE8183F009745CA /* graphsViewController.m */; };
+		496549B91AE81886009745CA /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 496549B71AE81886009745CA /* TableViewCell.m */; };
+		496549BA1AE81886009745CA /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496549B81AE81886009745CA /* TableViewCell.xib */; };
 		498E1C881ADECFB400E6C012 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 498E1C871ADECFB400E6C012 /* DismissSegue.m */; };
 		498E1C8B1ADED17000E6C012 /* addPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 498E1C8A1ADED17000E6C012 /* addPhotoVC.m */; };
 		4992EA961ADF549E00E1EE30 /* selectPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4992EA951ADF549E00E1EE30 /* selectPhotoVC.m */; };
@@ -87,8 +90,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		496B08F91AE57D2C007BC24C /* theGraphsForTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = theGraphsForTracker.h; sourceTree = "<group>"; };
-		496B08FA1AE57D2C007BC24C /* theGraphsForTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = theGraphsForTracker.m; sourceTree = "<group>"; };
+		496549B11AE81817009745CA /* graphsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = graphsViewController.xib; sourceTree = "<group>"; };
+		496549B31AE8183F009745CA /* graphsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphsViewController.h; sourceTree = "<group>"; };
+		496549B41AE8183F009745CA /* graphsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = graphsViewController.m; sourceTree = "<group>"; };
+		496549B61AE81886009745CA /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		496549B71AE81886009745CA /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		496549B81AE81886009745CA /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		498E1C861ADECFB400E6C012 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
 		498E1C871ADECFB400E6C012 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
 		498E1C891ADED17000E6C012 /* addPhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addPhotoVC.h; sourceTree = "<group>"; };
@@ -99,8 +106,6 @@
 		49DBDD521ADCC2830051EAA0 /* heart-rate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-rate@2x.png"; sourceTree = "<group>"; };
 		49DBDD531ADCC2830051EAA0 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
 		49DBDD541ADCC2830051EAA0 /* people-group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "people-group@2x.png"; sourceTree = "<group>"; };
-		49DBE5341AE2BCB800FEFDB9 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
-		49DBE5351AE2BCB800FEFDB9 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		A1C48D7C1AAFBC3400398E93 /* NatureSunshine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NatureSunshine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C48D801AAFBC3400398E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C48D811AAFBC3400398E93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -314,12 +319,14 @@
 				498E1C8A1ADED17000E6C012 /* addPhotoVC.m */,
 				4992EA941ADF549E00E1EE30 /* selectPhotoVC.h */,
 				4992EA951ADF549E00E1EE30 /* selectPhotoVC.m */,
-				49DBE5341AE2BCB800FEFDB9 /* TableViewCell.h */,
-				49DBE5351AE2BCB800FEFDB9 /* TableViewCell.m */,
 				FB0739ED1AE4BD3F00F0DD2F /* ConfigViewController.h */,
 				FB0739EE1AE4BD3F00F0DD2F /* ConfigViewController.m */,
-				496B08F91AE57D2C007BC24C /* theGraphsForTracker.h */,
-				496B08FA1AE57D2C007BC24C /* theGraphsForTracker.m */,
+				496549B11AE81817009745CA /* graphsViewController.xib */,
+				496549B31AE8183F009745CA /* graphsViewController.h */,
+				496549B41AE8183F009745CA /* graphsViewController.m */,
+				496549B61AE81886009745CA /* TableViewCell.h */,
+				496549B71AE81886009745CA /* TableViewCell.m */,
+				496549B81AE81886009745CA /* TableViewCell.xib */,
 			);
 			path = NatureSunshine;
 			sourceTree = "<group>";
@@ -481,6 +488,7 @@
 				FB4341541AE328B70014F7B7 /* Main.storyboard in Resources */,
 				A1C48DBD1AAFC33700398E93 /* photos.png in Resources */,
 				FB43A1E81AD446DD00110063 /* demo_4.jpg in Resources */,
+				496549B21AE81817009745CA /* graphsViewController.xib in Resources */,
 				A1C48DBE1AAFC33700398E93 /* routines.png in Resources */,
 				A1C48DC01AAFC33700398E93 /* wall.png in Resources */,
 				A1C48DBF1AAFC33700398E93 /* tracker.png in Resources */,
@@ -495,6 +503,7 @@
 				49DBDD561ADCC2830051EAA0 /* heart-rate@2x.png in Resources */,
 				49DBDD571ADCC2830051EAA0 /* house@2x.png in Resources */,
 				A1C48DBC1AAFC33700398E93 /* group.png in Resources */,
+				496549BA1AE81886009745CA /* TableViewCell.xib in Resources */,
 				FB8046291AE2DF4200038875 /* Danleech-Simple-Facebook.jpg in Resources */,
 				A1C48D901AAFBC3400398E93 /* Images.xcassets in Resources */,
 				FB43A1E71AD446DD00110063 /* demo_3.jpg in Resources */,
@@ -517,7 +526,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C48D8B1AAFBC3400398E93 /* SecondViewController.m in Sources */,
+				496549B51AE8183F009745CA /* graphsViewController.m in Sources */,
 				498E1C881ADECFB400E6C012 /* DismissSegue.m in Sources */,
+				496549B91AE81886009745CA /* TableViewCell.m in Sources */,
 				FB0739EF1AE4BD3F00F0DD2F /* ConfigViewController.m in Sources */,
 				A1C48DAA1AAFBD0100398E93 /* ThirdViewController.m in Sources */,
 				FBFF7FED1AE35E2300C95775 /* UUChartLabel.m in Sources */,
@@ -535,7 +546,6 @@
 				FB8046221AE2B69C00038875 /* LoginViewController.m in Sources */,
 				A1C48D821AAFBC3400398E93 /* main.m in Sources */,
 				A1C48DB31AAFBD5000398E93 /* SixthViewController.m in Sources */,
-				496B08FB1AE57D2C007BC24C /* theGraphsForTracker.m in Sources */,
 				498E1C8B1ADED17000E6C012 /* addPhotoVC.m in Sources */,
 				BBDAE3611AE7FB1C00F9CF97 /* MemberCell.m in Sources */,
 			);

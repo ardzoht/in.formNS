@@ -7,6 +7,7 @@
 //
 
 #import "SixthViewController.h"
+#import "graphsViewController.h"
 
 @interface SixthViewController ()
 
@@ -93,6 +94,12 @@
         confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Lbs."];
     }
     
+}
+
+- (IBAction)showGraphs:(id)sender {
+    
+    graphsViewController *myGraphs = [[graphsViewController alloc] init];
+    [self presentViewController:myGraphs animated:YES completion:nil];
 }
 
 @end

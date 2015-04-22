@@ -2,7 +2,7 @@
 //  TableViewCell.m
 //  NatureSunshine
 //
-//  Created by David Sáenz on 18/04/15.
+//  Created by David Sáenz on 22/04/15.
 //  Copyright (c) 2015 Alex&Dave. All rights reserved.
 //
 
@@ -10,7 +10,6 @@
 #import "UUChart.h"
 
 @interface TableViewCell ()<UUChartDataSource>
-
 {
     NSIndexPath *path;
     UUChart *chartView;
@@ -28,7 +27,7 @@
     
     path = indexPath;
     
-    chartView = [[UUChart alloc]initwithUUChartDataFrame:CGRectMake(10, 10, [UIScreen mainScreen].bounds.size.width-20, 40)
+    chartView = [[UUChart alloc]initwithUUChartDataFrame:CGRectMake(10, 10, [UIScreen mainScreen].bounds.size.width-20, 150)
                                               withSource:self
                                                withStyle:indexPath.section==1?UUChartBarStyle:UUChartLineStyle];
     [chartView showInView:self.contentView];

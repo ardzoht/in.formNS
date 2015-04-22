@@ -27,6 +27,7 @@
 
 - (IBAction)sendTrackerData:(id)sender;
 
+- (IBAction)showGraphs:(id)sender;
 
 
 
