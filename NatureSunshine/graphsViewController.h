@@ -10,5 +10,6 @@
 
 @interface graphsViewController : UIViewController
 
+- (IBAction)dismissView:(id)sender;
 
 @end

@@ -70,4 +70,8 @@
 
 
 
+- (IBAction)dismissView:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

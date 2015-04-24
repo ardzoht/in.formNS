@@ -73,7 +73,10 @@
 - (IBAction)sendTrackerData:(id)sender {
     double theData;
     
+        //For the first segmented index
     if(mySegmentedControl.selectedSegmentIndex == 0){
+        
+      if(![dataTxtField.text isEqual:@""]){
         theData = [dataTxtField.text doubleValue];
         NSLog(@"%@", dataTxtField.text);
         NSLog(@"%f", theData);
@@ -92,14 +95,25 @@
             if (succeeded) {
                 NSLog(@"Data uploaded");
             } else {
-                UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Something went wrong..." message:@"Ther was an error while uploading your data. Please, try again." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+                UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Something went wrong..." message:@"There was an error while uploading your data. Please, try again." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
                 [myAlert show];
             }
         }];
         
+        dataTxtField.text = NULL;
+      }
+        
+        else{
+            UIAlertView *noDataAlert = [[UIAlertView alloc] initWithTitle:@"Uh-oh..." message:@"You didn't write any data! Please, introduce your information." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [noDataAlert show];
+        }
+        
     }
     
+        //For the second segmented index
     else if(mySegmentedControl.selectedSegmentIndex == 1){
+        
+      if(![dataTxtField.text isEqual:@""]){
         theData = [dataTxtField.text doubleValue];
         NSLog(@"%@", dataTxtField.text);
         NSLog(@"%f", theData);
@@ -118,17 +132,28 @@
             if (succeeded) {
                 NSLog(@"Data uploaded");
             } else {
-                UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Something went wrong..." message:@"Ther was an error while uploading your data. Please, try again." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+                UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Something went wrong..." message:@"There was an error while uploading your data. Please, try again." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
                 [myAlert show];
             }
         }];
-    }
+        
+        dataTxtField.text = NULL;
+      }
+        
+            else{
+                UIAlertView *noDataAlert = [[UIAlertView alloc] initWithTitle:@"Uh-oh..." message:@"You didn't write any data! Please, introduce your information." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [noDataAlert show];
+           }
+   }
     
+        //For the third segmented index
     else if(mySegmentedControl.selectedSegmentIndex == 2){
-       theData = [dataTxtField.text doubleValue];
+       
+      if(![dataTxtField.text isEqual:@""]){
+        theData = [dataTxtField.text doubleValue];
         NSLog(@"%@", dataTxtField.text);
         NSLog(@"%f", theData);
-        confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!:"];
+        confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
         confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Lbs."];
         
         NSNumber *myData = [NSNumber numberWithDouble:theData];
@@ -143,10 +168,18 @@
             if (succeeded) {
                 NSLog(@"Data uploaded");
             } else {
-                UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Something went wrong..." message:@"Ther was an error while uploading your data. Please, try again." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+                UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Something went wrong..." message:@"There was an error while uploading your data. Please, try again." delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
                 [myAlert show];
             }
         }];
+        
+        dataTxtField.text = NULL;
+      }
+        
+        else{
+            UIAlertView *noDataAlert = [[UIAlertView alloc] initWithTitle:@"Uh-oh..." message:@"You didn't write any data! Please, introduce your information." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [noDataAlert show];
+        }
     }
     
 }
