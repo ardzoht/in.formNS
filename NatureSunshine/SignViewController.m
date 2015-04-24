@@ -93,6 +93,19 @@
             [self presentViewController:vc animated:YES completion:nil];
             }
             else {
+                NSString *user = [[PFUser currentUser] username];
+                PFObject *coachGroup = [PFObject objectWithClassName:@"CoachGroups"];
+                coachGroup[@"user"] = user;
+                coachGroup[@"coach"] = user;
+                [coachGroup saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if(succeeded) {
+                        //Object saved
+                        NSLog(@"Saved coach group successfully");
+                    } else {
+                        //There was an error
+                        NSLog(@"There was an error saving the object");
+                    }
+                }];
             UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"homeVC"];
             [self presentViewController:vc animated:YES completion:nil];
             }
@@ -101,6 +114,7 @@
             NSLog(@"Error: %@", errorStr);
         }
     }];
+    
     
     
 }
