@@ -871,7 +871,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-Ig-iOG">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-Ig-iOG">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="My Photos" id="gKu-DU-rW0">
@@ -901,7 +901,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="231" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="REe-ty-neN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="231" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="REe-ty-neN">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -911,16 +911,25 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yda-ce-Sby" id="7uj-Wj-kEY">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="demo_1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Zue-QH-W91">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zue-QH-W91">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="218"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="{Title}" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPN-6L-Yb9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{Title}" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPN-6L-Yb9">
                                                     <rect key="frame" x="8" y="197" width="234" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fPN-6L-Yb9" firstAttribute="bottom" secondItem="Zue-QH-W91" secondAttribute="bottom" id="TOh-Gi-zts"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fPN-6L-Yb9" secondAttribute="trailing" constant="70" id="cOS-Ew-ncC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fPN-6L-Yb9" secondAttribute="bottom" constant="4" id="lRz-Tv-nxt"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zue-QH-W91" secondAttribute="trailing" id="oNx-30-71s"/>
+                                                <constraint firstItem="fPN-6L-Yb9" firstAttribute="leading" secondItem="7uj-Wj-kEY" secondAttribute="leadingMargin" id="rzJ-BO-HRA"/>
+                                                <constraint firstItem="Zue-QH-W91" firstAttribute="leading" secondItem="7uj-Wj-kEY" secondAttribute="leading" id="sxv-em-uso"/>
+                                                <constraint firstItem="Zue-QH-W91" firstAttribute="top" secondItem="7uj-Wj-kEY" secondAttribute="top" id="tKm-Z1-Vn3"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -936,6 +945,16 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="tVZ-Ig-iOG" secondAttribute="trailing" constant="-16" id="7f5-JU-vor"/>
+                            <constraint firstItem="REe-ty-neN" firstAttribute="top" secondItem="tVZ-Ig-iOG" secondAttribute="bottom" id="8HW-bZ-FfW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="REe-ty-neN" secondAttribute="trailing" constant="-16" id="FT5-ad-kTw"/>
+                            <constraint firstItem="tVZ-Ig-iOG" firstAttribute="top" secondItem="oQV-0g-7pF" secondAttribute="bottom" id="IZF-bC-WWv"/>
+                            <constraint firstItem="REe-ty-neN" firstAttribute="leading" secondItem="5Jj-35-7Bk" secondAttribute="leadingMargin" constant="-16" id="JUo-Sg-u9p"/>
+                            <constraint firstItem="ITv-bb-Yh4" firstAttribute="top" secondItem="REe-ty-neN" secondAttribute="bottom" id="Kpp-fb-zp1"/>
+                            <constraint firstItem="REe-ty-neN" firstAttribute="top" secondItem="tVZ-Ig-iOG" secondAttribute="bottom" id="olX-Eg-6UA"/>
+                            <constraint firstItem="tVZ-Ig-iOG" firstAttribute="leading" secondItem="5Jj-35-7Bk" secondAttribute="leadingMargin" constant="-16" id="pg5-5o-IJ0"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Photos" image="camera-7.png" id="eec-Ca-eB2"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -1154,7 +1173,6 @@
     <resources>
         <image name="LogoNS.jpg" width="396" height="344"/>
         <image name="camera-7.png" width="30" height="30"/>
-        <image name="demo_1.jpg" width="460" height="276"/>
         <image name="heart-rate.png" width="29" height="30"/>
         <image name="house.png" width="30" height="30"/>
         <image name="natures-sunshine.gif" width="275" height="238"/>
@@ -1168,7 +1186,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="m9y-ca-xo6"/>
-        <segue reference="dkf-Zk-dSP"/>
+        <segue reference="HX0-ZE-IFF"/>
         <segue reference="W93-fx-i7x"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

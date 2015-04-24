@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UIViewController
+@interface ThirdViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    NSArray *photos;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

@@ -8,10 +8,8 @@
 
 #import "ThirdViewController.h"
 #import "PhotoCell.h"
-
+#import <Parse/Parse.h>
 @interface ThirdViewController ()
-
-@property (nonatomic, strong) NSArray *tableItems;
 
 @end
 
@@ -19,13 +17,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    PFQuery *userCoach = [PFQuery queryWithClassName:@"CoachGroups"];
+    [userCoach whereKey:@"user" equalTo:[PFUser currentUser].username];
+    [userCoach selectKeys:@[@"coach"]];
+    PFObject *coachObject = [userCoach getFirstObject];
+    NSString *coachString = coachObject[@"coach"];
+
     
     // Load the items in the table
-    self.tableItems = @[[UIImage imageNamed:@"demo_1.jpg"],
-                        [UIImage imageNamed:@"demo_2.jpg"],
-                        [UIImage imageNamed:@"demo_2.jpg"],
-                        [UIImage imageNamed:@"demo_1.jpg"],
-                        [UIImage imageNamed:@"demo_2.jpg"]];
+    PFQuery *group = [PFQuery queryWithClassName:@"UserPhotos"];
+    [group whereKey:@"coach" equalTo:coachString];
+    [group selectKeys:@[@"photo", @"username"]];
+    [group findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d photos.", objects.count);
+            // Do something with the found objects
+            photos = objects;
+            [self.tableView reloadData];
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+
+    
+    
 }
 
 
@@ -48,16 +67,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.tableItems.count;
+    return photos.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"photoCell";
     PhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    PFObject *imageObject = [photos objectAtIndex:indexPath.row];
+    PFFile *imageFile = [imageObject objectForKey:@"photo"];
+
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+    if (!error) {
+            cell.parallaxImage.image = [UIImage imageWithData:data];
+
+        }
+    }];
     
+
     cell.titleLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Example %d",), indexPath.row];
-    cell.parallaxImage.image = self.tableItems[indexPath.row];
     
     return cell;
 }

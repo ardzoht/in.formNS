@@ -7,8 +7,13 @@
 //
 
 #import "addPhotoVC.h"
-
-@interface addPhotoVC ()
+#import <Parse/Parse.h>
+@interface addPhotoVC () {
+    NSString *coachString;
+    PFFile *imageFile;
+    UIImage *image;
+    
+}
 
 @end
 
@@ -23,6 +28,11 @@
         
         [anAlert show];
     }
+    PFQuery *coach = [PFQuery queryWithClassName:@"CoachGroups"];
+    [coach whereKey:@"user" equalTo:[PFUser currentUser].username];
+    [coach selectKeys:@[@"coach"]];
+    PFObject *coachObject = [coach getFirstObject];
+    coachString = coachObject[@"coach"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,12 +66,29 @@
 }
 
 - (IBAction)uploadImage:(id)sender {
+    NSString *user = [[PFUser currentUser] username];
+    PFObject *photo = [PFObject objectWithClassName:@"UserPhotos"];
+    photo[@"user"] = user;
+    photo[@"coach"] = coachString;
+    NSData *data = UIImageJPEGRepresentation(image, 0.5f);
+    
+    imageFile = [PFFile fileWithName:@"Image.jpg" data:data];
+    photo[@"photo"] = imageFile;
+    [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(succeeded) {
+            //Object saved
+            NSLog(@"Saved coach group successfully");
+        } else {
+            //There was an error
+            NSLog(@"There was an error saving the object");
+        }
+    }];
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     UIImage *myImage = info[UIImagePickerControllerEditedImage];
     self.myImageView.image = myImage;
-    
+    image = myImage;
     UIImageWriteToSavedPhotosAlbum(myImage, nil, nil, nil);
     
     [picker dismissViewControllerAnimated:YES completion:NULL];

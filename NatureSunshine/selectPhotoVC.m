@@ -7,8 +7,12 @@
 //
 
 #import "selectPhotoVC.h"
-
-@interface selectPhotoVC ()
+#import <Parse/Parse.h>
+@interface selectPhotoVC () {
+    NSString *coachString;
+    PFFile *imageFile;
+    UIImage *image;
+}
 
 @end
 
@@ -17,6 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    PFQuery *coach = [PFQuery queryWithClassName:@"CoachGroups"];
+    [coach whereKey:@"user" equalTo:[PFUser currentUser].username];
+    [coach selectKeys:@[@"coach"]];
+    PFObject *coachObject = [coach getFirstObject];
+    coachString = coachObject[@"coach"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,12 +53,33 @@
 }
 
 - (IBAction)uploadImage:(id)sender {
+    NSString *user = [[PFUser currentUser] username];
+    PFObject *photo = [PFObject objectWithClassName:@"UserPhotos"];
+    photo[@"user"] = user;
+    photo[@"coach"] = coachString;
+    NSData *data = UIImageJPEGRepresentation(image, 0.5f);
+    
+    imageFile = [PFFile fileWithName:@"Image.jpg" data:data];
+    photo[@"photo"] = imageFile;
+    [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(succeeded) {
+            //Object saved
+            NSLog(@"Saved coach group successfully");
+        } else {
+            //There was an error
+            NSLog(@"There was an error saving the object");
+            
+        }
+    }];
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    
     UIImage *mySelectedImage = info[UIImagePickerControllerEditedImage];
     self.mySelectImageView.image = mySelectedImage;
-    
+    image = mySelectedImage;
+
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 

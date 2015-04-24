@@ -61,12 +61,18 @@
     
     [self.loadingSpinner startAnimating];
     self.loadingSpinner.hidden = NO;
+    if(imageFile != nil) {
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (!error) {
             cell.profilePic.image = [UIImage imageWithData:data];
             
         }
     }];
+    }
+    else {
+        cell.profilePic.image = [UIImage imageNamed:@"LogoNS.jpg"];
+    }
+    
     
     cell.username.text = members[indexPath.row][@"user"];
     [self.loadingSpinner stopAnimating];
