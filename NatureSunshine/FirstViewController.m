@@ -95,6 +95,7 @@
                 if (succeeded) {
                     // The object has been saved.
                     NSLog(@"Post saved");
+                    [_wallView reloadData];
                 } else {
                     // There was a problem, check error.description
                 }

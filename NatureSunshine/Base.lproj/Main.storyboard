@@ -17,13 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hoz-yO-oqN">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hoz-yO-oqN">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gVb-0q-TID"/>
+                                </constraints>
                                 <items>
                                     <navigationItem id="ClY-Cc-atR"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="153" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jvl-nI-gT3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="153" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jvl-nI-gT3">
                                 <rect key="frame" x="0.0" y="64" width="320" height="408"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -83,10 +86,10 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="28h-4d-lHV"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="natures-sunshine.gif" translatesAutoresizingMaskIntoConstraints="NO" id="32X-Ae-5Td">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="natures-sunshine.gif" translatesAutoresizingMaskIntoConstraints="NO" id="32X-Ae-5Td">
                                 <rect key="frame" x="138" y="20" width="45" height="44"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post a message" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cQg-mm-FdI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post a message" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cQg-mm-FdI">
                                 <rect key="frame" x="16" y="480" width="276" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
@@ -96,6 +99,24 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="32X-Ae-5Td" secondAttribute="trailing" constant="121" id="2Mj-Ib-BPF"/>
+                            <constraint firstItem="Hoz-yO-oqN" firstAttribute="bottom" secondItem="jvl-nI-gT3" secondAttribute="top" id="2lg-xX-6SC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jvl-nI-gT3" secondAttribute="trailing" constant="-16" id="5LJ-cd-PEB"/>
+                            <constraint firstItem="jvl-nI-gT3" firstAttribute="top" secondItem="32X-Ae-5Td" secondAttribute="bottom" id="B8c-3W-ic5"/>
+                            <constraint firstItem="cQg-mm-FdI" firstAttribute="top" secondItem="jvl-nI-gT3" secondAttribute="bottom" constant="8" id="FF9-ha-8Zf"/>
+                            <constraint firstItem="jvl-nI-gT3" firstAttribute="top" secondItem="32X-Ae-5Td" secondAttribute="bottom" id="IjL-0o-luO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cQg-mm-FdI" secondAttribute="trailing" constant="12" id="KIe-Zr-y0O"/>
+                            <constraint firstItem="32X-Ae-5Td" firstAttribute="top" secondItem="PJ3-a1-kPU" secondAttribute="bottom" id="Ksv-R1-diC"/>
+                            <constraint firstItem="cQg-mm-FdI" firstAttribute="top" secondItem="jvl-nI-gT3" secondAttribute="bottom" constant="8" id="PvG-Zl-pGC"/>
+                            <constraint firstItem="e7r-Jh-Pxd" firstAttribute="top" secondItem="cQg-mm-FdI" secondAttribute="bottom" constant="9" id="Rb8-Oy-hdu"/>
+                            <constraint firstItem="Hoz-yO-oqN" firstAttribute="trailing" secondItem="jvl-nI-gT3" secondAttribute="trailing" id="XUW-dH-7Ac"/>
+                            <constraint firstItem="Hoz-yO-oqN" firstAttribute="leading" secondItem="jvl-nI-gT3" secondAttribute="leading" id="abI-t6-Ygv"/>
+                            <constraint firstItem="Hoz-yO-oqN" firstAttribute="top" secondItem="32X-Ae-5Td" secondAttribute="top" id="c0p-hG-wcF"/>
+                            <constraint firstItem="32X-Ae-5Td" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="122" id="fE1-sZ-Ssp"/>
+                            <constraint firstItem="cQg-mm-FdI" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="jTM-ZD-M3G"/>
+                            <constraint firstItem="jvl-nI-gT3" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="vHZ-ye-nbX"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Wall" image="house.png" id="acW-dT-cKf"/>
                     <connections>
@@ -119,7 +140,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="W3N-F6-Q9c">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="W3N-F6-Q9c">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="MQ8-Es-uI7">
@@ -167,7 +188,7 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="KfT-BK-QQW"/>
                                 </connections>
                             </tableView>
-                            <navigationBar opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3pZ-O3-N9J">
+                            <navigationBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pZ-O3-N9J">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="My Group" id="r4C-m9-qMr"/>
@@ -175,6 +196,16 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W3N-F6-Q9c" firstAttribute="top" secondItem="3pZ-O3-N9J" secondAttribute="bottom" id="7IN-Sf-nGC"/>
+                            <constraint firstItem="W3N-F6-Q9c" firstAttribute="top" secondItem="3pZ-O3-N9J" secondAttribute="bottom" id="FJF-MZ-0P6"/>
+                            <constraint firstItem="W3N-F6-Q9c" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="abP-Q9-1xf"/>
+                            <constraint firstItem="3pZ-O3-N9J" firstAttribute="top" secondItem="P2G-fV-4Tf" secondAttribute="bottom" id="h8P-da-Haw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3pZ-O3-N9J" secondAttribute="trailing" constant="-16" id="iLo-7I-Tp6"/>
+                            <constraint firstItem="3pZ-O3-N9J" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="rV7-Tm-biY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W3N-F6-Q9c" secondAttribute="trailing" constant="-16" id="tz1-L8-faR"/>
+                            <constraint firstItem="yRs-Tu-YzA" firstAttribute="top" secondItem="W3N-F6-Q9c" secondAttribute="bottom" id="wzv-gF-KEZ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Group" image="people-group.png" id="cPa-gy-q4n"/>
                     <connections>
