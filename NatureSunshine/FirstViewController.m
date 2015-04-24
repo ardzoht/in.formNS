@@ -8,7 +8,10 @@
 
 #import "FirstViewController.h"
 #import "PostCell.h"
-@interface FirstViewController ()
+#import <Parse/Parse.h>
+@interface FirstViewController () {
+    NSNumber *isCoachNumber;
+}
 
 @end
 
@@ -17,20 +20,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    posts = [[NSMutableArray alloc]init];
-    people = [[NSMutableArray alloc]init];
-    types = [[NSMutableArray alloc]init];
-    [posts addObject:@"This is awesome! Trying it for the first time guys"];
-    [posts addObject:@"Guys, nice session today, we'll be in touch."];
-    [posts addObject:@"Great time today with my friends at the session, looking forward to a great week"];
     
-    [people addObject:@"Clark Kent"];
-    [people addObject:@"Coach Carter"];
-    [people addObject:@"John Doe"];
+    PFQuery *coach = [PFQuery queryWithClassName:@"CoachGroups"];
+    [coach whereKey:@"user" equalTo:[PFUser currentUser].username];
+    [coach selectKeys:@[@"coach"]];
+    PFObject *coachObject = [coach getFirstObject];
+    coachString = coachObject[@"coach"];
     
-    [types addObject:@"member"];
-    [types addObject:@"coach"];
-    [types addObject:@"member"];
+    PFQuery *isCoach = [PFUser query];
+    [isCoach whereKey:@"username" equalTo:[PFUser currentUser].username];
+    [isCoach selectKeys:@[@"Coach"]];
+    PFObject *isCoachObject = [isCoach getFirstObject];
+    isCoachNumber = isCoachObject[@"Coach"];
+    
+    PFQuery *group = [PFQuery queryWithClassName:@"Posts"];
+    [group whereKey:@"coach" equalTo:coachString];
+    [group selectKeys:@[@"post", @"username", @"isCoach"]];
+    [group findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d posts.", objects.count);
+            // Do something with the found objects
+            posts = objects;
+            [_wallView reloadData];
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
     
 }
 
@@ -52,12 +69,39 @@
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"postCell"];
-
     
-    cell.post.text = [posts objectAtIndex:indexPath.row];
-    cell.name.text = [people objectAtIndex:indexPath.row];
-    cell.type.text = [types objectAtIndex:indexPath.row];
+    if(posts[indexPath.row][@"isCoach"] == [NSNumber numberWithInt:1]) {
+        type = @"Coach";
+    }
+    else {
+        type = @"Member";
+    }
+
+    cell.post.text = posts[indexPath.row][@"post"];
+    cell.name.text = posts[indexPath.row][@"username"];
+    cell.type.text = type;
     return cell;
 }
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.sender) {
+        [textField resignFirstResponder];
+        if ([textField.text length] > 0 || textField.text != nil || [textField.text isEqual:@""] == FALSE) {
+            PFObject *post = [PFObject objectWithClassName:@"Posts"];
+            post[@"post"] = textField.text;
+            post[@"username"] = [[PFUser currentUser] username];
+            post[@"coach"] = coachString;
+            post[@"isCoach"] = isCoachNumber;
+            [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (succeeded) {
+                    // The object has been saved.
+                    NSLog(@"Post saved");
+                } else {
+                    // There was a problem, check error.description
+                }
+            }];
+        }
+        return NO;
+    }
+    return YES;
+}
 @end

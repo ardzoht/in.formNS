@@ -8,14 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-@interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate> {
     
-    NSMutableArray *posts;
-    NSMutableArray *people;
-    NSMutableArray *types;
+    NSArray *posts;
+    NSString *coachString;
+    NSString *type;
     
 }
 @property (weak, nonatomic) IBOutlet UITableView *wallView;
+@property (weak, nonatomic) IBOutlet UITextField *sender;
 
 
 @end
