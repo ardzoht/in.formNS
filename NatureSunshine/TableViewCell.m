@@ -8,6 +8,7 @@
 
 #import "TableViewCell.h"
 #import "UUChart.h"
+#import <Parse/Parse.h>
 
 @interface TableViewCell ()<UUChartDataSource>
 {
@@ -46,58 +47,121 @@
 #pragma mark - @required
 //横坐标标题数组
 - (NSArray *)UUChart_xLableArray:(UUChart *)chart
-{
+{    
+    PFUser *currentUser = [PFUser currentUser];
+    NSString *userN = [[NSString alloc] initWithFormat:@"%@", currentUser.username];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Water"];
+    [query whereKey:@"username" equalTo:userN];
+    [query selectKeys:@[@"nOunces"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            nEntries = [NSNumber numberWithUnsignedInteger:objects.count];
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
+    PFQuery *query1 = [PFQuery queryWithClassName:@"Calories"];
+    [query1 whereKey:@"username" equalTo:userN];
+    [query1 selectKeys:@[@"nCalories"]];
+    [query1 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            nEntries1 = [NSNumber numberWithUnsignedInteger:objects.count];
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
+    PFQuery *query2 = [PFQuery queryWithClassName:@"Weight"];
+    [query2 whereKey:@"username" equalTo:userN];
+    [query2 selectKeys:@[@"nPounds"]];
+    [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            nEntries2 = [NSNumber numberWithUnsignedInteger:objects.count];
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
     
     if (path.section==0) {
-        switch (path.row) {
-            case 0:
-                return [self getXTitles:5];
-            case 1:
-                return [self getXTitles:11];
-            case 2:
-                return [self getXTitles:7];
-            case 3:
-                return [self getXTitles:7];
-            default:
-                break;
-        }
-    }else{
-        switch (path.row) {
-            case 0:
-                return [self getXTitles:11];
-            case 1:
-                return [self getXTitles:7];
-            default:
-                break;
-        }
+        return [self getXTitles:[nEntries intValue]];
+    }
+     else{
+         if(path.section==1){
+             return [self getXTitles:[nEntries1 intValue]];
+         }
+         
+         else{
+             return [self getXTitles:[nEntries2 intValue]];
+         }
     }
     return [self getXTitles:20];
 }
+
+
 //数值多重数组
-- (NSArray *)UUChart_yValueArray:(UUChart *)chart
-{
-    NSArray *ary = @[@"22",@"44",@"15",@"40",@"42"];
-    NSArray *ary1 = @[@"22",@"54",@"15",@"30",@"42",@"77",@"43"];
-    NSArray *ary2 = @[@"76",@"34",@"54",@"23",@"16",@"32",@"17"];
-    NSArray *ary3 = @[@"3",@"12",@"25",@"55",@"52"];
-    NSArray *ary4 = @[@"23",@"42",@"25",@"15",@"30",@"42",@"32",@"40",@"42",@"25",@"33"];
+- (NSArray *)UUChart_yValueArray:(UUChart *)chart{
+    /*
+     NSArray *ary = @[@"22",@"44",@"15",@"40",@"42"];
+     NSArray *ary1 = @[@"22",@"54",@"15",@"30",@"42",@"77",@"43"];
+     NSArray *ary2 = @[@"76",@"34",@"54",@"23",@"16",@"32",@"17"];
+     NSArray *ary3 = @[@"3",@"12",@"25",@"55",@"52"];
+     NSArray *ary4 = @[@"23",@"42",@"25",@"15",@"30",@"42",@"32",@"40",@"42",@"25",@"33"]; */
     
-    if (path.section==0) {
-        switch (path.row) {
-            case 0:
-                return @[ary];
-            case 1:
-                return @[ary4];
-            case 2:
-                return @[ary1,ary2];
-            default:
-                return @[ary1,ary2,ary3];
+    PFUser *currentUser = [PFUser currentUser];
+    NSString *userN = [[NSString alloc] initWithFormat:@"%@", currentUser.username];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Water"];
+    [query whereKey:@"username" equalTo:userN];
+    [query selectKeys:@[@"nOunces"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            ary = objects;
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
-    }else{
-        if (path.row) {
-            return @[ary1,ary2];
-        }else{
-            return @[ary4];
+    }];
+    
+    PFQuery *query1 = [PFQuery queryWithClassName:@"Calories"];
+    [query1 whereKey:@"username" equalTo:userN];
+    [query1 selectKeys:@[@"nCalories"]];
+    [query1 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            ary1 = objects;
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
+    PFQuery *query2 = [PFQuery queryWithClassName:@"Weight"];
+    [query2 whereKey:@"username" equalTo:userN];
+    [query2 selectKeys:@[@"nPounds"]];
+    [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            ary2 = objects;
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
+    
+    if (path.section == 0) {
+           return @[ary];
+    }
+    else{
+        if(path.section == 1){
+            return @[ary1];
+      }
+        else{
+            return @[ary2];
         }
     }
 }

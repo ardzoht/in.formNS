@@ -8,6 +8,7 @@
 
 #import "graphsViewController.h"
 #import "TableViewCell.h"
+#import <Parse/Parse.h>
 
 @interface graphsViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -24,11 +25,11 @@
 #pragma mark - UITableView Datasource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return section?2:4;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -57,7 +58,17 @@
     UILabel *label = [[UILabel alloc]initWithFrame:frame];
     label.font = [UIFont systemFontOfSize:30];
     label.backgroundColor = [[UIColor lightGrayColor]colorWithAlphaComponent:0.3];
-    label.text = section ? @"Bar":@"Line";
+    
+    if(section == 0){
+        label.text = @"Water";
+     }
+    else if(section == 1){
+        label.text = @"Calories";
+     }
+    else{
+        label.text = @"Weight";
+     }
+    
     label.textColor = [UIColor colorWithRed:0.257 green:0.650 blue:0.478 alpha:1.000];
     label.textAlignment = NSTextAlignmentCenter;
     return label;
@@ -67,8 +78,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 - (IBAction)dismissView:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

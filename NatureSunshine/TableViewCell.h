@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewCell : UITableViewCell
+@interface TableViewCell : UITableViewCell{
+ 
+    NSArray *ary, *ary1, *ary2;
+    NSNumber *nEntries, *nEntries1, *nEntries2;
+}
 
 - (void)configUI:(NSIndexPath *)indexPath;
 

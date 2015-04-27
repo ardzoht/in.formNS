@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "PostCell.h"
 #import <Parse/Parse.h>
+
 @interface FirstViewController () {
     NSNumber *isCoachNumber;
 }
