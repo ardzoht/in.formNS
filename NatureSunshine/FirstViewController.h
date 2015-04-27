@@ -17,6 +17,7 @@
 }
 @property (weak, nonatomic) IBOutlet UITableView *wallView;
 @property (weak, nonatomic) IBOutlet UITextField *sender;
+- (IBAction)logOut:(id)sender;
 
 
 @end
