@@ -8,6 +8,9 @@
 
 #import "SignViewController.h"
 #import <Parse/Parse.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface SignViewController ()
 
@@ -54,6 +57,18 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)loginFacebook:(id)sender {
+
+        
+        NSArray *permissionsArray = @[@"email", @"public_profile"];
+        [PFFacebookUtils initializeFacebook];
+        // Login PFUser using Facebook
+
+    [PFFacebookUtils logInWithPermissionsInBackground:permissionsArray];
+    [self _loadData];
+    }
+
+
 - (IBAction)doneSignUp:(id)sender {
     
     PFUser *user = [PFUser user];
@@ -188,6 +203,30 @@
     
     [self.scrollView setContentOffset:CGPointZero animated:YES];
     
+}
+- (void)_loadData {
+    // ...
+    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"me"
+                                                                   parameters:nil];
+    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            // result is a dictionary with the user's Facebook data
+            NSDictionary *userData = (NSDictionary *)result;
+            
+            NSString *facebookID = userData[@"id"];
+            NSString *name = userData[@"name"];
+            NSString *email = userData[@"e-mail"];
+            
+            
+            // Now add the data to the UI elements
+            // ...
+            self.mailText.text = email;
+            self.userText.text = name;
+        }
+        else {
+            NSLog(@"%@",[error localizedDescription]);
+        }
+    }];
 }
 
 

@@ -102,4 +102,7 @@
 }
 
 
+- (IBAction)logOut:(id)sender {
+    [PFUser logOutInBackground];
+}
 @end
