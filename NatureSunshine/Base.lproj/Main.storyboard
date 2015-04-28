@@ -33,11 +33,9 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="logOut:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dPm-Ty-QHj"/>
+                                                    <segue destination="I0T-dr-Pxk" kind="custom" customClass="DismissSegue" id="hfF-yO-boe"/>
                                                 </connections>
                                             </button>
-                                            <connections>
-                                                <segue destination="I0T-dr-Pxk" kind="modal" id="iYW-HM-qbQ"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -218,11 +216,9 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="logOut:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="kTz-lU-sox"/>
+                                                    <segue destination="I0T-dr-Pxk" kind="custom" customClass="DismissSegue" id="ab8-jP-SOx"/>
                                                 </connections>
                                             </button>
-                                            <connections>
-                                                <segue destination="I0T-dr-Pxk" kind="modal" id="HN2-nb-YAe"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -248,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="-414"/>
+            <point key="canvasLocation" x="848" y="-464"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="s0j-Pm-hj4">
@@ -721,7 +717,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5b-5c-Qsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-121" y="-981"/>
+            <point key="canvasLocation" x="-45" y="-1078"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -907,11 +903,9 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="logOut:" destination="IqX-K0-6ZW" eventType="touchUpInside" id="6ug-yv-PcQ"/>
+                                                    <segue destination="I0T-dr-Pxk" kind="custom" customClass="DismissSegue" id="0zV-jJ-qA7"/>
                                                 </connections>
                                             </button>
-                                            <connections>
-                                                <segue destination="I0T-dr-Pxk" kind="modal" id="p5Y-5V-GnI"/>
-                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="IQo-1d-OOv">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PE1-i9-iqY">
@@ -1214,9 +1208,9 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="8KI-Og-zx3"/>
-        <segue reference="p5Y-5V-GnI"/>
-        <segue reference="HX0-ZE-IFF"/>
+        <segue reference="ab8-jP-SOx"/>
         <segue reference="W93-fx-i7x"/>
+        <segue reference="HX0-ZE-IFF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
 </document>
