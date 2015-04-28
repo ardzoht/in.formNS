@@ -33,9 +33,11 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="logOut:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dPm-Ty-QHj"/>
-                                                    <segue destination="I0T-dr-Pxk" kind="custom" customClass="DismissSegue" id="hfF-yO-boe"/>
                                                 </connections>
                                             </button>
+                                            <connections>
+                                                <segue destination="I0T-dr-Pxk" kind="modal" id="iYW-HM-qbQ"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -216,9 +218,11 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="logOut:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="kTz-lU-sox"/>
-                                                    <segue destination="I0T-dr-Pxk" kind="custom" customClass="DismissSegue" id="ab8-jP-SOx"/>
                                                 </connections>
                                             </button>
+                                            <connections>
+                                                <segue destination="I0T-dr-Pxk" kind="modal" id="HN2-nb-YAe"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -244,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="-464"/>
+            <point key="canvasLocation" x="583" y="-414"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="s0j-Pm-hj4">
@@ -717,7 +721,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5b-5c-Qsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25" y="-794"/>
+            <point key="canvasLocation" x="-121" y="-981"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -903,9 +907,11 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="logOut:" destination="IqX-K0-6ZW" eventType="touchUpInside" id="6ug-yv-PcQ"/>
-                                                    <segue destination="I0T-dr-Pxk" kind="custom" customClass="DismissSegue" id="0zV-jJ-qA7"/>
                                                 </connections>
                                             </button>
+                                            <connections>
+                                                <segue destination="I0T-dr-Pxk" kind="modal" id="p5Y-5V-GnI"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="IQo-1d-OOv">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PE1-i9-iqY">
@@ -982,7 +988,6 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="REe-ty-neN" id="mal-uj-dUg"/>
-                        <segue destination="I0T-dr-Pxk" kind="custom" customClass="DismissSegue" id="xY3-id-f34"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZY-hP-1B6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1116,7 +1121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HQ-Wr-gqK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-86" y="105"/>
+            <point key="canvasLocation" x="154" y="-299"/>
         </scene>
         <!--The Graphs For Tracker-->
         <scene sceneID="j4b-2K-Whx">
@@ -1172,7 +1177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljB-Jr-U0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-86" y="839"/>
+            <point key="canvasLocation" x="170" y="527"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gbW-P3-jEm">
@@ -1208,8 +1213,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="m9y-ca-xo6"/>
-        <segue reference="xY3-id-f34"/>
+        <segue reference="8KI-Og-zx3"/>
+        <segue reference="p5Y-5V-GnI"/>
         <segue reference="HX0-ZE-IFF"/>
         <segue reference="W93-fx-i7x"/>
     </inferredMetricsTieBreakers>
