@@ -71,24 +71,21 @@
 }
 
 - (IBAction)sendTrackerData:(id)sender {
-    double theData;
+    NSString *theData;
     
         //For the first segmented index
     if(mySegmentedControl.selectedSegmentIndex == 0){
         
       if(![dataTxtField.text isEqual:@""]){
-        theData = [dataTxtField.text doubleValue];
+        theData = dataTxtField.text;
         NSLog(@"%@", dataTxtField.text);
-        NSLog(@"%f", theData);
         confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
-        confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Oz."];
-        
-        NSNumber *myData = [NSNumber numberWithDouble:theData];
+        confirmedData.text = theData;
         
         PFUser *currentUser = [PFUser currentUser];
         PFObject *dataSent = [PFObject objectWithClassName:@"Water"];
     
-        dataSent[@"nOunces"] = myData;
+        dataSent[@"nOunces"] = theData;
         dataSent[@"username"] = currentUser.username;
         
         [dataSent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -114,18 +111,16 @@
     else if(mySegmentedControl.selectedSegmentIndex == 1){
         
       if(![dataTxtField.text isEqual:@""]){
-        theData = [dataTxtField.text doubleValue];
+        theData = dataTxtField.text;
         NSLog(@"%@", dataTxtField.text);
-        NSLog(@"%f", theData);
         confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
-        confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Cals."];
-        
-        NSNumber *myData = [NSNumber numberWithDouble:theData];
+        confirmedData.text = theData;
+    
         
         PFUser *currentUser = [PFUser currentUser];
         PFObject *dataSent = [PFObject objectWithClassName:@"Calories"];
         
-        dataSent[@"nCalories"] = myData;
+        dataSent[@"nCalories"] = theData;
         dataSent[@"username"] = currentUser.username;
         
         [dataSent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -150,18 +145,15 @@
     else if(mySegmentedControl.selectedSegmentIndex == 2){
        
       if(![dataTxtField.text isEqual:@""]){
-        theData = [dataTxtField.text doubleValue];
+        theData = dataTxtField.text;
         NSLog(@"%@", dataTxtField.text);
-        NSLog(@"%f", theData);
         confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
-        confirmedData.text = [NSString stringWithFormat:@"%.2f %s", theData, "Lbs."];
-        
-        NSNumber *myData = [NSNumber numberWithDouble:theData];
+        confirmedData.text = theData;
         
         PFUser *currentUser = [PFUser currentUser];
         PFObject *dataSent = [PFObject objectWithClassName:@"Weight"];
         
-        dataSent[@"nPounds"] = myData;
+        dataSent[@"nPounds"] = theData;
         dataSent[@"username"] = currentUser.username;
         
         [dataSent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

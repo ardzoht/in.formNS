@@ -30,7 +30,7 @@
     
     chartView = [[UUChart alloc]initwithUUChartDataFrame:CGRectMake(10, 10, [UIScreen mainScreen].bounds.size.width-20, 150)
                                               withSource:self
-                                               withStyle:indexPath.section==1?UUChartBarStyle:UUChartLineStyle];
+                                               withStyle:indexPath.section==1?UUChartLineStyle:UUChartLineStyle];
     [chartView showInView:self.contentView];
 }
 
@@ -119,49 +119,42 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Water"];
     [query whereKey:@"username" equalTo:userN];
     [query selectKeys:@[@"nOunces"]];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            ary = objects;
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
+    ary = [query findObjects];
+    
+    NSMutableArray *values = [[NSMutableArray alloc]init];
+    for(PFObject *object in ary) {
+        [values addObject:object[@"nOunces"]];
+    }
     
     PFQuery *query1 = [PFQuery queryWithClassName:@"Calories"];
     [query1 whereKey:@"username" equalTo:userN];
     [query1 selectKeys:@[@"nCalories"]];
-    [query1 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            ary1 = objects;
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
+    ary1 = [query1 findObjects];
+    
+    NSMutableArray *values1 = [[NSMutableArray alloc]init];
+    for(PFObject *object in ary1) {
+        [values1 addObject:object[@"nCalories"]];
+    }
     
     PFQuery *query2 = [PFQuery queryWithClassName:@"Weight"];
     [query2 whereKey:@"username" equalTo:userN];
     [query2 selectKeys:@[@"nPounds"]];
-    [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            ary2 = objects;
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
+    ary2 = [query2 findObjects];
     
+    NSMutableArray *values2 = [[NSMutableArray alloc]init];
+    for(PFObject *object in ary2) {
+        [values2 addObject:object[@"nPounds"]];
+    }
     
     if (path.section == 0) {
-           return @[ary];
+           return @[values];
     }
     else{
         if(path.section == 1){
-            return @[ary1];
+            return @[values1];
       }
         else{
-            return @[ary2];
+            return @[values2];
         }
     }
 }

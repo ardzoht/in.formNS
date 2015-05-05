@@ -33,7 +33,7 @@
     NSInteger max = 0;
     NSInteger min = 1000000000;
 
-    for (NSArray * ary in yLabels) {
+    for (NSArray *ary in yLabels) {
         for (NSString *valueString in ary) {
             NSInteger value = [valueString integerValue];
             if (value > max) {
