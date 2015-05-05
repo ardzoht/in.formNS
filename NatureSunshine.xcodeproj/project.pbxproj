@@ -61,6 +61,7 @@
 		FB43A1E61AD446DD00110063 /* demo_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB43A1E21AD446DD00110063 /* demo_2.jpg */; };
 		FB43A1E71AD446DD00110063 /* demo_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB43A1E31AD446DD00110063 /* demo_3.jpg */; };
 		FB43A1E81AD446DD00110063 /* demo_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB43A1E41AD446DD00110063 /* demo_4.jpg */; };
+		FB4945C21AEF3E8900A257F0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4945C11AEF3E8900A257F0 /* FacebookSDK.framework */; };
 		FB4F04261ABE061D00F4B765 /* natures-sunshine.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB4F04221ABE061D00F4B765 /* natures-sunshine.gif */; };
 		FB4F04291ABE072F00F4B765 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4F04281ABE072F00F4B765 /* PostCell.m */; };
 		FB80461C1AE2B2D300038875 /* LogoNS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB80461B1AE2B2D300038875 /* LogoNS.jpg */; };
@@ -163,6 +164,7 @@
 		FB43A1E21AD446DD00110063 /* demo_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo_2.jpg; sourceTree = "<group>"; };
 		FB43A1E31AD446DD00110063 /* demo_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo_3.jpg; sourceTree = "<group>"; };
 		FB43A1E41AD446DD00110063 /* demo_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo_4.jpg; sourceTree = "<group>"; };
+		FB4945C11AEF3E8900A257F0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		FB4F04221ABE061D00F4B765 /* natures-sunshine.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "natures-sunshine.gif"; sourceTree = "<group>"; };
 		FB4F04271ABE072F00F4B765 /* PostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		FB4F04281ABE072F00F4B765 /* PostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				BB7AC71A1AD5C30400B727DB /* libsqlite3.dylib in Frameworks */,
 				BB7AC71B1AD5C30400B727DB /* libz.dylib in Frameworks */,
 				FB80463C1AE2E18A00038875 /* FBSDKCoreKit.framework in Frameworks */,
+				FB4945C21AEF3E8900A257F0 /* FacebookSDK.framework in Frameworks */,
 				BB7AC71C1AD5C30400B727DB /* MobileCoreServices.framework in Frameworks */,
 				BB7AC71D1AD5C30400B727DB /* QuartzCore.framework in Frameworks */,
 				FB80463E1AE2E18A00038875 /* FBSDKShareKit.framework in Frameworks */,
@@ -246,6 +249,7 @@
 		A1C48D731AAFBC3400398E93 = {
 			isa = PBXGroup;
 			children = (
+				FB4945C11AEF3E8900A257F0 /* FacebookSDK.framework */,
 				FB4341411AE31D640014F7B7 /* UUChart */,
 				FB8046391AE2E18A00038875 /* FBSDKCoreKit.framework */,
 				FB80463A1AE2E18A00038875 /* FBSDKLoginKit.framework */,

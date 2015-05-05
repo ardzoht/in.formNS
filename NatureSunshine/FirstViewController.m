@@ -24,7 +24,6 @@
     
     PFQuery *coach = [PFQuery queryWithClassName:@"CoachGroups"];
     [coach whereKey:@"user" equalTo:[PFUser currentUser].username];
-    [coach selectKeys:@[@"coach"]];
     PFObject *coachObject = [coach getFirstObject];
     coachString = coachObject[@"coach"];
     
@@ -50,6 +49,7 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
+    
     
 }
 

@@ -11,7 +11,9 @@
 @interface TableViewCell : UITableViewCell{
  
     NSArray *ary, *ary1, *ary2;
-    NSNumber *nEntries, *nEntries1, *nEntries2;
+    NSArray *count, *count1, *count2;
+    NSInteger *nEntries, *nEntries1, *nEntries2;
+    NSMutableArray *anAry, *anAry1, *anAry2;
 }
 
 - (void)configUI:(NSIndexPath *)indexPath;

@@ -103,15 +103,7 @@
     
     imageFile = [PFFile fileWithName:@"Image.jpg" data:data];
     coachGroup[@"profilePic"] = imageFile;
-    [coachGroup saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(succeeded) {
-            //Object saved
-            NSLog(@"Saved coach group successfully");
-        } else {
-            //There was an error
-            NSLog(@"There was an error saving the object");
-        }
-    }];
+    [coachGroup save];
     
 }
 

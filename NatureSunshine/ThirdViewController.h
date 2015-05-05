@@ -13,6 +13,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)logOut:(id)sender;
 
 
 

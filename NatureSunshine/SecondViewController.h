@@ -15,6 +15,7 @@
 }
 
 
+- (IBAction)logOut:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *groupView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingSpinner;
 
