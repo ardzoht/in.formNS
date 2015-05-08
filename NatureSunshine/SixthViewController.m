@@ -7,6 +7,7 @@
 //
 
 #import "SixthViewController.h"
+#import "LoginViewController.h"
 #import "graphsViewController.h"
 #import <Parse/Parse.h>
 
@@ -47,7 +48,6 @@
         dataTxtField.text = NULL;
         dataTxtField.placeholder = @"Oz.";
         confirmationLabel.text = @"Fill the space above, then tap Send";
-        confirmedData.text = NULL;
     }
     
     else if(mySegmentedControl.selectedSegmentIndex == 1){
@@ -56,7 +56,6 @@
         dataTxtField.text = NULL;
         dataTxtField.placeholder = @"Cals.";
         confirmationLabel.text = @"Fill the space above, then tap Send";
-        confirmedData.text = NULL;
     }
     
     else if(mySegmentedControl.selectedSegmentIndex == 2){
@@ -65,7 +64,6 @@
         dataTxtField.text = NULL;
         dataTxtField.placeholder = @"Lbs.";
         confirmationLabel.text = @"Fill the space above, then tap Send";
-        confirmedData.text = NULL;
     }
 
 }
@@ -80,7 +78,6 @@
         theData = dataTxtField.text;
         NSLog(@"%@", dataTxtField.text);
         confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
-        confirmedData.text = theData;
         
         PFUser *currentUser = [PFUser currentUser];
         PFObject *dataSent = [PFObject objectWithClassName:@"Water"];
@@ -114,8 +111,6 @@
         theData = dataTxtField.text;
         NSLog(@"%@", dataTxtField.text);
         confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
-        confirmedData.text = theData;
-    
         
         PFUser *currentUser = [PFUser currentUser];
         PFObject *dataSent = [PFObject objectWithClassName:@"Calories"];
@@ -148,7 +143,6 @@
         theData = dataTxtField.text;
         NSLog(@"%@", dataTxtField.text);
         confirmationLabel.text = [NSString stringWithFormat:@"You info has been uploaded!"];
-        confirmedData.text = theData;
         
         PFUser *currentUser = [PFUser currentUser];
         PFObject *dataSent = [PFObject objectWithClassName:@"Weight"];
@@ -188,6 +182,10 @@
     
     graphsViewController *myGraphs = [[graphsViewController alloc] init];
     [self presentViewController:myGraphs animated:YES completion:nil];
+}
+
+- (IBAction)logout:(id)sender {
+    [PFUser logOutInBackground];
 }
 
 @end

@@ -102,7 +102,7 @@
     NSLog(@"%@", currentUser.username);
     
     PFQuery *query = [PFQuery queryWithClassName:@"Water"];
-    [query whereKey:@"username" equalTo:userN];
+    [query whereKey:@"username" equalTo:currentUser.username];
     [query selectKeys:@[@"nOunces"]];
     ary = [query findObjects];
     
@@ -112,7 +112,7 @@
     }
     
     PFQuery *query1 = [PFQuery queryWithClassName:@"Calories"];
-    [query1 whereKey:@"username" equalTo:userN];
+    [query1 whereKey:@"username" equalTo:currentUser.username];
     [query1 selectKeys:@[@"nCalories"]];
     ary1 = [query1 findObjects];
     
@@ -122,7 +122,7 @@
     }
     
     PFQuery *query2 = [PFQuery queryWithClassName:@"Weight"];
-    [query2 whereKey:@"username" equalTo:userN];
+    [query2 whereKey:@"username" equalTo:currentUser.username];
     [query2 selectKeys:@[@"nPounds"]];
     ary2 = [query2 findObjects];
     
