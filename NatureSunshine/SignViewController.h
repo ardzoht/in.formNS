@@ -18,8 +18,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *confirmText;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *type;
-- (IBAction)loginFacebook:(id)sender;
-
 
 - (IBAction)doneSignUp:(id)sender;
 
