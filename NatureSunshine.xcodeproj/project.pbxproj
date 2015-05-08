@@ -37,6 +37,7 @@
 		A1C48DC61AAFC9AD00398E93 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C48DC41AAFC9AD00398E93 /* EventKitUI.framework */; };
 		A1C48DC81AAFC9BD00398E93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C48DC71AAFC9BD00398E93 /* Foundation.framework */; };
 		A1C48DCA1AAFC9C700398E93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C48DC91AAFC9C700398E93 /* CoreGraphics.framework */; };
+		BB2023731AFD1592006FC892 /* firstrun-background.png in Resources */ = {isa = PBXBuildFile; fileRef = BB2023721AFD1591006FC892 /* firstrun-background.png */; };
 		BB7AC7091AD5C2A000B727DB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7AC7031AD5C2A000B727DB /* Bolts.framework */; };
 		BB7AC70A1AD5C2A000B727DB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7AC7041AD5C2A000B727DB /* Parse.framework */; };
 		BB7AC70B1AD5C2A000B727DB /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7AC7051AD5C2A000B727DB /* ParseCrashReporting.framework */; };
@@ -116,7 +117,7 @@
 		A1C48D861AAFBC3400398E93 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		A1C48D871AAFBC3400398E93 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		A1C48D891AAFBC3400398E93 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		A1C48D8A1AAFBC3400398E93 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		A1C48D8A1AAFBC3400398E93 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A1C48D8D1AAFBC3400398E93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1C48D8F1AAFBC3400398E93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A1C48D921AAFBC3400398E93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 		A1C48DC41AAFC9AD00398E93 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		A1C48DC71AAFC9BD00398E93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1C48DC91AAFC9C700398E93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BB2023721AFD1591006FC892 /* firstrun-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "firstrun-background.png"; sourceTree = "<group>"; };
 		BB7AC7031AD5C2A000B727DB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		BB7AC7041AD5C2A000B727DB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		BB7AC7051AD5C2A000B727DB /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 		FB4F041E1ABE060200F4B765 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				BB2023721AFD1591006FC892 /* firstrun-background.png */,
 				FB80462A1AE2DFD100038875 /* facebook-logo.png */,
 				FB8046281AE2DF4200038875 /* Danleech-Simple-Facebook.jpg */,
 				FB8046261AE2DEF000038875 /* Danleech-Simple-Facebook.ico */,
@@ -497,6 +500,7 @@
 				FB43A1E81AD446DD00110063 /* demo_4.jpg in Resources */,
 				496549B21AE81817009745CA /* graphsViewController.xib in Resources */,
 				A1C48DBE1AAFC33700398E93 /* routines.png in Resources */,
+				BB2023731AFD1592006FC892 /* firstrun-background.png in Resources */,
 				A1C48DC01AAFC33700398E93 /* wall.png in Resources */,
 				A1C48DBF1AAFC33700398E93 /* tracker.png in Resources */,
 				FB80462B1AE2DFD100038875 /* facebook-logo.png in Resources */,

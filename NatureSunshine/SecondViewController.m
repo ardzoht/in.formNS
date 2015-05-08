@@ -40,6 +40,7 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
+
     
 }
 
@@ -47,6 +48,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return members.count;
@@ -73,8 +75,16 @@
         cell.profilePic.image = [UIImage imageNamed:@"LogoNS.jpg"];
     }
     
+    NSString *isCoach;
     
     cell.username.text = members[indexPath.row][@"user"];
+    if([coachString isEqualToString:cell.username.text]) {
+        isCoach = @"Coach";
+    }
+    else {
+        isCoach = @"Member";
+    }
+    cell.type.text = isCoach;
     [self.loadingSpinner stopAnimating];
     self.loadingSpinner.hidden = YES;
     return cell;

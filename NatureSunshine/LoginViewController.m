@@ -22,6 +22,7 @@
     _mailText.delegate = self;
     _passwordText.delegate = self;
 
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,6 +45,8 @@
                                     block: ^(PFUser *user, NSError *error)
      {
          if (user) {
+             _mailText.text = @"";
+             _passwordText.text = @"";
              NSString * storyboardName = @"Main";
              UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
              UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"homeVC"];

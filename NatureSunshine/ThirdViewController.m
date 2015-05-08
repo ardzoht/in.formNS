@@ -29,7 +29,7 @@
     // Load the items in the table
     PFQuery *group = [PFQuery queryWithClassName:@"UserPhotos"];
     [group whereKey:@"coach" equalTo:coachString];
-    [group selectKeys:@[@"photo", @"username"]];
+    [group selectKeys:@[@"photo", @"user"]];
     [group findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
@@ -76,6 +76,7 @@
     PhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     PFObject *imageObject = [photos objectAtIndex:indexPath.row];
+    NSString *user = [imageObject objectForKey:@"user"];
     PFFile *imageFile = [imageObject objectForKey:@"photo"];
 
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -84,9 +85,7 @@
 
         }
     }];
-    
-
-    cell.titleLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Example %d",), indexPath.row];
+    cell.titleLabel.text = user;
     
     return cell;
 }

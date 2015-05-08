@@ -98,6 +98,7 @@
 - (NSArray *)UUChart_yValueArray:(UUChart *)chart{
   
     PFUser *currentUser = [PFUser currentUser];
+    NSString *userN = [currentUser username];
     NSLog(@"%@", currentUser.username);
     
     PFQuery *query = [PFQuery queryWithClassName:@"Water"];
@@ -141,6 +142,7 @@
             return @[values2];
         }
     }
+
 }
 
 
