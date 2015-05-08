@@ -19,8 +19,7 @@
     IBOutlet UISegmentedControl *mySegmentedControl;
     
     IBOutlet UILabel *confirmationLabel;
-    
-    IBOutlet UILabel *confirmedData;
+
 }
 
 - (IBAction)segmentedValue:(id)sender;
@@ -29,6 +28,7 @@
 
 - (IBAction)showGraphs:(id)sender;
 
+- (IBAction)logout:(id)sender;
 
 
 

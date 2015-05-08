@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="-441" y="623"/>
+            <point key="canvasLocation" x="-64" y="783"/>
         </tableView>
         <view contentMode="scaleToFill" id="SNd-gu-icy">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -33,17 +33,26 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g8p-SO-Lh8">
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8p-SO-Lh8">
                     <rect key="frame" x="0.0" y="19" width="320" height="44"/>
+                    <color key="barTintColor" red="0.68235294120000001" green="0.86274509799999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                    </textAttributes>
                     <items>
                         <navigationItem title="My Graphs" id="WoY-gm-IZy">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="yHS-hr-RJx">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WTE-7t-Dzc">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="WTE-7t-Dzc">
                                     <rect key="frame" x="-23" y="-15" width="71" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Back">
-                                        <color key="titleColor" red="0.54117647059999996" green="0.72549019609999998" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="Back">
+                                                <attributes>
+                                                    <font key="NSFont" size="16" name="GillSans-Light"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                     </state>
                                     <connections>
                                         <action selector="dismissView:" destination="-1" eventType="touchUpInside" id="Yyg-wx-mS3"/>

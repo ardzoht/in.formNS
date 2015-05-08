@@ -14,6 +14,7 @@
 		498E1C881ADECFB400E6C012 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 498E1C871ADECFB400E6C012 /* DismissSegue.m */; };
 		498E1C8B1ADED17000E6C012 /* addPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 498E1C8A1ADED17000E6C012 /* addPhotoVC.m */; };
 		4992EA961ADF549E00E1EE30 /* selectPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4992EA951ADF549E00E1EE30 /* selectPhotoVC.m */; };
+		499455031AFD0226006893CB /* Graph-Chart-iOS7-Icon-cssauthor.com_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 499455021AFD0226006893CB /* Graph-Chart-iOS7-Icon-cssauthor.com_3.png */; };
 		49DBDD551ADCC2830051EAA0 /* camera-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD511ADCC2830051EAA0 /* camera-7@2x.png */; };
 		49DBDD561ADCC2830051EAA0 /* heart-rate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD521ADCC2830051EAA0 /* heart-rate@2x.png */; };
 		49DBDD571ADCC2830051EAA0 /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD531ADCC2830051EAA0 /* house@2x.png */; };
@@ -104,6 +105,7 @@
 		498E1C8A1ADED17000E6C012 /* addPhotoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addPhotoVC.m; sourceTree = "<group>"; };
 		4992EA941ADF549E00E1EE30 /* selectPhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectPhotoVC.h; sourceTree = "<group>"; };
 		4992EA951ADF549E00E1EE30 /* selectPhotoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectPhotoVC.m; sourceTree = "<group>"; };
+		499455021AFD0226006893CB /* Graph-Chart-iOS7-Icon-cssauthor.com_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph-Chart-iOS7-Icon-cssauthor.com_3.png"; sourceTree = "<group>"; };
 		49DBDD511ADCC2830051EAA0 /* camera-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-7@2x.png"; sourceTree = "<group>"; };
 		49DBDD521ADCC2830051EAA0 /* heart-rate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-rate@2x.png"; sourceTree = "<group>"; };
 		49DBDD531ADCC2830051EAA0 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
@@ -235,6 +237,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		499455011AFD01E3006893CB /* SomeImages */ = {
+			isa = PBXGroup;
+			children = (
+				499455021AFD0226006893CB /* Graph-Chart-iOS7-Icon-cssauthor.com_3.png */,
+			);
+			name = SomeImages;
+			sourceTree = "<group>";
+		};
 		49DBDD481ADCC0160051EAA0 /* tab-Icons2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +302,7 @@
 		A1C48D7E1AAFBC3400398E93 /* NatureSunshine */ = {
 			isa = PBXGroup;
 			children = (
+				499455011AFD01E3006893CB /* SomeImages */,
 				49DBDD481ADCC0160051EAA0 /* tab-Icons2 */,
 				FB4F041E1ABE060200F4B765 /* Media */,
 				A1C48DB41AAFC33700398E93 /* tab-icons */,
@@ -514,6 +525,7 @@
 				FB8046291AE2DF4200038875 /* Danleech-Simple-Facebook.jpg in Resources */,
 				A1C48D901AAFBC3400398E93 /* Images.xcassets in Resources */,
 				FB43A1E71AD446DD00110063 /* demo_3.jpg in Resources */,
+				499455031AFD0226006893CB /* Graph-Chart-iOS7-Icon-cssauthor.com_3.png in Resources */,
 				BBDAE3631AE83D4300F9CF97 /* profile-pic.png in Resources */,
 				FB43A1E61AD446DD00110063 /* demo_2.jpg in Resources */,
 			);
