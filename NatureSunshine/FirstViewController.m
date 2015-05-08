@@ -35,7 +35,7 @@
     
     PFQuery *group = [PFQuery queryWithClassName:@"Posts"];
     [group whereKey:@"coach" equalTo:coachString];
-    [group selectKeys:@[@"post", @"username", @"isCoach"]];
+    [group selectKeys:@[@"post", @"username", @"isCoach", @"createdAt"]];
     [group orderByDescending:@"createdAt"];
     [group findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -72,17 +72,14 @@
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"postCell"];
     
-    if(posts[indexPath.row][@"isCoach"] == [NSNumber numberWithInt:1]) {
-        type = @"Coach";
-    }
-    else {
-        type = @"Member";
-    }
+    NSDate *time = [posts[indexPath.row] createdAt];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"EEE, MMM d, h:mm a"];
+    cell.type.text = [NSString stringWithFormat:@"%@", [dateFormat stringFromDate:time]];
     cell.post.lineBreakMode = NSLineBreakByWordWrapping;
     cell.post.numberOfLines = 0;
     cell.post.text = posts[indexPath.row][@"post"];
     cell.name.text = posts[indexPath.row][@"username"];
-    cell.type.text = type;
     return cell;
 }
 
@@ -101,7 +98,7 @@
     
     PFQuery *group = [PFQuery queryWithClassName:@"Posts"];
     [group whereKey:@"coach" equalTo:coachString];
-    [group selectKeys:@[@"post", @"username", @"isCoach"]];
+    [group selectKeys:@[@"post", @"username", @"isCoach", @"createdAt"]];
     [group orderByDescending:@"createdAt"];
     [group findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
