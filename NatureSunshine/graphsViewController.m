@@ -56,17 +56,17 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     CGRect frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width , 30);
     UILabel *label = [[UILabel alloc]initWithFrame:frame];
-    label.font = [UIFont systemFontOfSize:30];
+    label.font = [UIFont systemFontOfSize:25];
     label.backgroundColor = [[UIColor lightGrayColor]colorWithAlphaComponent:0.3];
     
     if(section == 0){
-        label.text = @"Water";
+        label.text = @"Water (Oz.)";
      }
     else if(section == 1){
-        label.text = @"Calories";
+        label.text = @"Calories (Cals.)";
      }
     else{
-        label.text = @"Weight";
+        label.text = @"Weight (Lbs.)";
      }
     
     label.textColor = [UIColor colorWithRed:0.257 green:0.650 blue:0.478 alpha:1.000];

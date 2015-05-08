@@ -39,7 +39,7 @@
 {
     NSMutableArray *xTitles = [NSMutableArray array];
     for (int i=0; i<num; i++) {
-        NSString * str = [NSString stringWithFormat:@"R-%d",i];
+        NSString * str = [NSString stringWithFormat:@"Entry-%d",i+1];
         [xTitles addObject:str];
     }
     return xTitles;
@@ -98,7 +98,6 @@
 - (NSArray *)UUChart_yValueArray:(UUChart *)chart{
   
     PFUser *currentUser = [PFUser currentUser];
-    NSString *userN = [currentUser username];
     NSLog(@"%@", currentUser.username);
     
     PFQuery *query = [PFQuery queryWithClassName:@"Water"];
