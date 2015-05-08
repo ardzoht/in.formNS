@@ -1256,15 +1256,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSS-cH-u7g">
-                                <rect key="frame" x="126" y="380" width="60" height="55"/>
-                                <state key="normal" title="Button" image="Graph-Chart-iOS7-Icon-cssauthor.com_3.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showGraphs:" destination="yGe-Pu-ylT" eventType="touchUpInside" id="ABK-9M-mSn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IsM-CE-jDp">
                                 <rect key="frame" x="47" y="342" width="219" height="30"/>
                                 <state key="normal">
@@ -1334,7 +1325,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Graph-Chart-iOS7-Icon-cssauthor.com_3.png" width="366" height="367"/>
         <image name="LogoNS.jpg" width="396" height="344"/>
         <image name="camera-7.png" width="30" height="30"/>
         <image name="heart-rate.png" width="29" height="30"/>
