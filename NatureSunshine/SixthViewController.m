@@ -22,7 +22,6 @@
     // Do any additional setup after loading the view.
     
     mySegmentedControl.selectedSegmentIndex = 0;
-    
      dataTxtField.delegate = self;
 }
 

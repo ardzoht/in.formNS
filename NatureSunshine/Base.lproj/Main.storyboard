@@ -88,14 +88,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="natures-sunshine.gif" translatesAutoresizingMaskIntoConstraints="NO" id="32X-Ae-5Td">
                                 <rect key="frame" x="138" y="20" width="45" height="44"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post a message" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cQg-mm-FdI">
-                                <rect key="frame" x="16" y="480" width="276" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="9pv-A4-QxB" id="cQY-9Q-s3s"/>
-                                </connections>
-                            </textField>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoz-yO-oqN">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <constraints>
@@ -136,6 +128,15 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="Post a message" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cQg-mm-FdI">
+                                <rect key="frame" x="16" y="480" width="276" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="cQY-9Q-s3s"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -365,17 +366,9 @@
                                             <constraint firstAttribute="height" constant="114" id="40N-L1-hJv"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eq9-FE-JSZ">
-                                        <rect key="frame" x="48" y="236" width="196" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="7Xs-MW-QA9" id="9Eb-0T-l9p"/>
-                                        </connections>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="i33-k4-LEU">
                                         <rect key="frame" x="48" y="370" width="196" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="7Xs-MW-QA9" id="wir-QM-8Xl"/>
@@ -383,7 +376,7 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ihi-hb-2yc">
                                         <rect key="frame" x="50" y="437" width="196" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="7Xs-MW-QA9" id="Wlq-QT-PNP"/>
@@ -400,7 +393,7 @@
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uop-6o-qRK">
                                         <rect key="frame" x="48" y="303" width="196" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="7Xs-MW-QA9" id="Xhp-56-n75"/>
@@ -440,6 +433,14 @@
                                             <action selector="loginFacebook:" destination="7Xs-MW-QA9" eventType="touchUpInside" id="o4p-kT-NXN"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eq9-FE-JSZ">
+                                        <rect key="frame" x="48" y="236" width="196" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="7Xs-MW-QA9" id="9Eb-0T-l9p"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="eq9-FE-JSZ" firstAttribute="leading" secondItem="aNT-jX-Blg" secondAttribute="leading" constant="48" id="0Dq-sD-YvV"/>
@@ -713,21 +714,28 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJH-Di-ciM">
                                         <rect key="frame" x="35" y="236" width="237" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iey-ut-lGz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iey-ut-lGz">
                                         <rect key="frame" x="46" y="274" width="200" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="EoE-cl-AWE"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="password">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="19" name="GillSans-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNy-8i-NDU">
                                         <rect key="frame" x="35" y="302" width="237" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UU3-Uq-DAx">
@@ -1207,7 +1215,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Oz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kQn-fZ-KUj">
                                 <rect key="frame" x="114" y="189" width="181" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ounces:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJT-Ge-s6T">
@@ -1274,14 +1282,15 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IsM-CE-jDp">
-                                <rect key="frame" x="47" y="342" width="219" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IsM-CE-jDp">
+                                <rect key="frame" x="47" y="354" width="219" height="30"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Let's have a look to my charts!">
                                             <attributes>
                                                 <color key="NSColor" red="0.49019607843137253" green="0.68235294117647061" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="18" name="GillSans-Light"/>
+                                                <integer key="NSUnderline" value="1"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -1295,7 +1304,9 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ZSp-uG-Rej" secondAttribute="trailing" constant="112" id="0kt-HG-CZY"/>
                             <constraint firstItem="aqM-4w-e3G" firstAttribute="trailing" secondItem="paV-7J-9LW" secondAttribute="trailingMargin" id="2VT-UM-LMZ"/>
+                            <constraint firstItem="IsM-CE-jDp" firstAttribute="top" secondItem="H6N-oV-LBo" secondAttribute="bottom" constant="37" id="6Co-aC-AJq"/>
                             <constraint firstItem="XJT-Ge-s6T" firstAttribute="leading" secondItem="paV-7J-9LW" secondAttribute="leadingMargin" constant="-4" id="7qO-7n-ixj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IsM-CE-jDp" secondAttribute="trailing" constant="38" id="FGH-Xe-D1a"/>
                             <constraint firstItem="Odr-rK-m3e" firstAttribute="leading" secondItem="paV-7J-9LW" secondAttribute="leadingMargin" constant="1" id="Fvp-uP-H80"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kQn-fZ-KUj" secondAttribute="trailing" constant="9" id="Ja9-It-r5B"/>
                             <constraint firstItem="Odr-rK-m3e" firstAttribute="top" secondItem="977-XA-0Xx" secondAttribute="bottom" constant="25" id="PPa-Va-3lW"/>
@@ -1303,6 +1314,7 @@
                             <constraint firstItem="ZSp-uG-Rej" firstAttribute="top" secondItem="kQn-fZ-KUj" secondAttribute="bottom" constant="23" id="S8G-dQ-sfB"/>
                             <constraint firstItem="H6N-oV-LBo" firstAttribute="leading" secondItem="paV-7J-9LW" secondAttribute="leadingMargin" constant="12" id="SGr-hu-Z1j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="H6N-oV-LBo" secondAttribute="trailing" constant="20" id="Uip-jd-3Zh"/>
+                            <constraint firstItem="IsM-CE-jDp" firstAttribute="leading" secondItem="paV-7J-9LW" secondAttribute="leadingMargin" constant="31" id="a4t-sB-RQ2"/>
                             <constraint firstItem="kQn-fZ-KUj" firstAttribute="leading" secondItem="XJT-Ge-s6T" secondAttribute="trailing" constant="13" id="cCt-zN-cwi"/>
                             <constraint firstItem="aqM-4w-e3G" firstAttribute="leading" secondItem="paV-7J-9LW" secondAttribute="leadingMargin" constant="-7" id="nhu-Br-mtf"/>
                             <constraint firstItem="ZSp-uG-Rej" firstAttribute="leading" secondItem="paV-7J-9LW" secondAttribute="leadingMargin" constant="105" id="qLI-CU-mFY"/>
