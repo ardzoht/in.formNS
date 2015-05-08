@@ -94,8 +94,11 @@
                                     <constraint firstAttribute="height" constant="44" id="gVb-0q-TID"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.72762896457852011" green="0.8772293244949495" blue="0.39317280658774728" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                </textAttributes>
                                 <items>
-                                    <navigationItem id="ClY-Cc-atR">
+                                    <navigationItem title="Wall" id="ClY-Cc-atR">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="8Md-av-Oqq">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="3cq-9T-xbC">
                                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>
@@ -733,7 +736,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sv-IL-hds">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8sv-IL-hds">
                                 <rect key="frame" x="20" y="28" width="280" height="540"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJH-Di-ciM">
@@ -1400,7 +1403,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="DGG-06-Gw9"/>
+        <segue reference="xeQ-bK-Zzk"/>
         <segue reference="dkf-Zk-dSP"/>
         <segue reference="W93-fx-i7x"/>
     </inferredMetricsTieBreakers>
