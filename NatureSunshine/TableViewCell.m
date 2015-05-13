@@ -39,10 +39,7 @@
 {
     PFUser *currentUser = [PFUser currentUser];
     NSString *userN = [[NSString alloc] initWithFormat:@"%@", currentUser.username];
-    
-    
 
-    
     PFQuery *query2 = [PFQuery queryWithClassName:@"Weight"];
     [query2 whereKey:@"username" equalTo:userN];
     [query2 selectKeys:@[@"createdAt"]];
@@ -71,6 +68,7 @@
         count = [query findObjects];
         
     }
+    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterNoStyle];
     [formatter setTimeStyle:NSDateFormatterShortStyle];

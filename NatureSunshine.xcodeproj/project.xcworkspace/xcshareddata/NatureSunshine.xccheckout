@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>D186CBEE-0226-49CE-A6EC-4555E36BA226</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>NatureSunshine</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>EB3E3573FD1EB96A6AA88FD711346740F64C5A77</key>
 		<string>https://github.com/ardzoht/in.formNS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>NatureSunshine.xcodeproj/project.xcworkspace</string>
+	<string>NatureSunshine.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>EB3E3573FD1EB96A6AA88FD711346740F64C5A77</key>
