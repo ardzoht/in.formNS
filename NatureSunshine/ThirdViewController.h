@@ -13,6 +13,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 - (IBAction)logOut:(id)sender;
 
 

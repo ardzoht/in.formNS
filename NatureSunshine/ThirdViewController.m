@@ -9,7 +9,10 @@
 #import "ThirdViewController.h"
 #import "PhotoCell.h"
 #import <Parse/Parse.h>
-@interface ThirdViewController ()
+@interface ThirdViewController () {
+    NSString *coachString;
+    
+}
 
 @end
 
@@ -19,11 +22,14 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshView:)      forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
     PFQuery *userCoach = [PFQuery queryWithClassName:@"CoachGroups"];
     [userCoach whereKey:@"user" equalTo:[PFUser currentUser].username];
     [userCoach selectKeys:@[@"coach"]];
     PFObject *coachObject = [userCoach getFirstObject];
-    NSString *coachString = coachObject[@"coach"];
+    coachString = coachObject[@"coach"];
 
     
     // Load the items in the table
@@ -100,6 +106,30 @@
     }
 }
 
+- (void)refreshView:(UIRefreshControl *)refresh  {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // (...code to get new data here...)
+        PFQuery *group = [PFQuery queryWithClassName:@"UserPhotos"];
+        [group whereKey:@"coach" equalTo:coachString];
+        [group selectKeys:@[@"photo", @"user"]];
+        [group findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                // The find succeeded.
+                NSLog(@"Successfully retrieved %d photos.", objects.count);
+                // Do something with the found objects
+                photos = objects;
+                [self.tableView reloadData];
+            } else {
+                // Log details of the failure
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
+        });
+    });
+}
 
 - (IBAction)logOut:(id)sender {
     [PFUser logOutInBackground];
