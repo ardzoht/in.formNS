@@ -9,6 +9,8 @@
 #import "SecondViewController.h"
 #import "MemberCell.h"
 #import <Parse/Parse.h>
+#include "graphsCoachViewController.h"
+
 @interface SecondViewController () {
     UIImage *image;
 }
@@ -94,6 +96,14 @@
         
     }
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if([coachString isEqualToString:[PFUser currentUser].username]) {
+        graphsCoachViewController *myGraphs = [[graphsCoachViewController alloc] init];
+        [self presentViewController:myGraphs animated:YES completion:nil];
+    }
+}
+
 
 
 - (IBAction)logOut:(id)sender {

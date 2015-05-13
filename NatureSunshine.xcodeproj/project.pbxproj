@@ -15,6 +15,10 @@
 		498E1C8B1ADED17000E6C012 /* addPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 498E1C8A1ADED17000E6C012 /* addPhotoVC.m */; };
 		4992EA961ADF549E00E1EE30 /* selectPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4992EA951ADF549E00E1EE30 /* selectPhotoVC.m */; };
 		499455031AFD0226006893CB /* Graph-Chart-iOS7-Icon-cssauthor.com_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 499455021AFD0226006893CB /* Graph-Chart-iOS7-Icon-cssauthor.com_3.png */; };
+		49CAA9E61AFD6B4B009C0E7E /* TableViewCellCoach.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CAA9E41AFD6B4B009C0E7E /* TableViewCellCoach.m */; };
+		49CAA9E71AFD6B4B009C0E7E /* TableViewCellCoach.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49CAA9E51AFD6B4B009C0E7E /* TableViewCellCoach.xib */; };
+		49CAA9E91AFD6BCB009C0E7E /* graphsCoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49CAA9E81AFD6BCB009C0E7E /* graphsCoachViewController.xib */; };
+		49CAA9EC1AFD6BEE009C0E7E /* graphsCoachViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CAA9EB1AFD6BEE009C0E7E /* graphsCoachViewController.m */; };
 		49DBDD551ADCC2830051EAA0 /* camera-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD511ADCC2830051EAA0 /* camera-7@2x.png */; };
 		49DBDD561ADCC2830051EAA0 /* heart-rate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD521ADCC2830051EAA0 /* heart-rate@2x.png */; };
 		49DBDD571ADCC2830051EAA0 /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DBDD531ADCC2830051EAA0 /* house@2x.png */; };
@@ -109,6 +113,12 @@
 		4992EA941ADF549E00E1EE30 /* selectPhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectPhotoVC.h; sourceTree = "<group>"; };
 		4992EA951ADF549E00E1EE30 /* selectPhotoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectPhotoVC.m; sourceTree = "<group>"; };
 		499455021AFD0226006893CB /* Graph-Chart-iOS7-Icon-cssauthor.com_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph-Chart-iOS7-Icon-cssauthor.com_3.png"; sourceTree = "<group>"; };
+		49CAA9E31AFD6B4B009C0E7E /* TableViewCellCoach.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellCoach.h; sourceTree = "<group>"; };
+		49CAA9E41AFD6B4B009C0E7E /* TableViewCellCoach.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellCoach.m; sourceTree = "<group>"; };
+		49CAA9E51AFD6B4B009C0E7E /* TableViewCellCoach.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellCoach.xib; sourceTree = "<group>"; };
+		49CAA9E81AFD6BCB009C0E7E /* graphsCoachViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = graphsCoachViewController.xib; sourceTree = "<group>"; };
+		49CAA9EA1AFD6BEE009C0E7E /* graphsCoachViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphsCoachViewController.h; sourceTree = "<group>"; };
+		49CAA9EB1AFD6BEE009C0E7E /* graphsCoachViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = graphsCoachViewController.m; sourceTree = "<group>"; };
 		49DBDD511ADCC2830051EAA0 /* camera-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-7@2x.png"; sourceTree = "<group>"; };
 		49DBDD521ADCC2830051EAA0 /* heart-rate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-rate@2x.png"; sourceTree = "<group>"; };
 		49DBDD531ADCC2830051EAA0 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
@@ -349,6 +359,12 @@
 				496549B61AE81886009745CA /* TableViewCell.h */,
 				496549B71AE81886009745CA /* TableViewCell.m */,
 				496549B81AE81886009745CA /* TableViewCell.xib */,
+				49CAA9E31AFD6B4B009C0E7E /* TableViewCellCoach.h */,
+				49CAA9E41AFD6B4B009C0E7E /* TableViewCellCoach.m */,
+				49CAA9E51AFD6B4B009C0E7E /* TableViewCellCoach.xib */,
+				49CAA9E81AFD6BCB009C0E7E /* graphsCoachViewController.xib */,
+				49CAA9EA1AFD6BEE009C0E7E /* graphsCoachViewController.h */,
+				49CAA9EB1AFD6BEE009C0E7E /* graphsCoachViewController.m */,
 			);
 			path = NatureSunshine;
 			sourceTree = "<group>";
@@ -511,6 +527,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB4341541AE328B70014F7B7 /* Main.storyboard in Resources */,
+				49CAA9E71AFD6B4B009C0E7E /* TableViewCellCoach.xib in Resources */,
+				49CAA9E91AFD6BCB009C0E7E /* graphsCoachViewController.xib in Resources */,
 				A1C48DBD1AAFC33700398E93 /* photos.png in Resources */,
 				FB43A1E81AD446DD00110063 /* demo_4.jpg in Resources */,
 				496549B21AE81817009745CA /* graphsViewController.xib in Resources */,
@@ -562,7 +580,9 @@
 				FB0739EF1AE4BD3F00F0DD2F /* ConfigViewController.m in Sources */,
 				A1C48DAA1AAFBD0100398E93 /* ThirdViewController.m in Sources */,
 				FBFF7FED1AE35E2300C95775 /* UUChartLabel.m in Sources */,
+				49CAA9EC1AFD6BEE009C0E7E /* graphsCoachViewController.m in Sources */,
 				FBFF7FEF1AE35E2300C95775 /* UULineChart.m in Sources */,
+				49CAA9E61AFD6B4B009C0E7E /* TableViewCellCoach.m in Sources */,
 				A1C48D851AAFBC3400398E93 /* AppDelegate.m in Sources */,
 				A1C48D881AAFBC3400398E93 /* FirstViewController.m in Sources */,
 				FBFF7FEE1AE35E2300C95775 /* UUColor.m in Sources */,
