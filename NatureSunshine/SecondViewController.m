@@ -91,11 +91,6 @@
     self.loadingSpinner.hidden = YES;
     return cell;
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if([coachString isEqualToString:[PFUser currentUser].username]) {
-        
-    }
-}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if([coachString isEqualToString:[PFUser currentUser].username]) {

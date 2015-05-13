@@ -27,7 +27,7 @@
     }
     
     path = indexPath;
-  
+    loop = 0;
     chartView = [[UUChart alloc]initwithUUChartDataFrame:CGRectMake(10, 10, [UIScreen mainScreen].bounds.size.width-20, 150)
                                               withSource:self
                                                withStyle:indexPath.section==1?UUChartLineStyle:UUChartLineStyle];
@@ -37,9 +37,48 @@
 
 - (NSArray *)getXTitles:(int)num
 {
+    PFUser *currentUser = [PFUser currentUser];
+    NSString *userN = [[NSString alloc] initWithFormat:@"%@", currentUser.username];
+    
+    
+
+    
+    PFQuery *query2 = [PFQuery queryWithClassName:@"Weight"];
+    [query2 whereKey:@"username" equalTo:userN];
+    [query2 selectKeys:@[@"createdAt"]];
+    count2 = [query2 findObjects];
+    
+    if (loop == 0) {
+        loop++;
+        PFQuery *query = [PFQuery queryWithClassName:@"Water"];
+        [query whereKey:@"username" equalTo:userN];
+        [query selectKeys:@[@"createdAt"]];
+        count = [query findObjects];
+    }
+    else if(loop == 1) {
+        loop++;
+        PFQuery *query = [PFQuery queryWithClassName:@"Calories"];
+        [query whereKey:@"username" equalTo:userN];
+        [query selectKeys:@[@"createdAt"]];
+        count = [query findObjects];
+        
+    }
+    else if(loop == 2) {
+        loop = 0;
+        PFQuery *query = [PFQuery queryWithClassName:@"Weight"];
+        [query whereKey:@"username" equalTo:userN];
+        [query selectKeys:@[@"createdAt"]];
+        count = [query findObjects];
+        
+    }
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterNoStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    
     NSMutableArray *xTitles = [NSMutableArray array];
-    for (int i=0; i<num; i++) {
-        NSString * str = [NSString stringWithFormat:@"Entry-%d",i+1];
+    for (int i=0; i<count.count; i++) {
+        NSDate *currentDate = [count[i] createdAt];
+        NSString * str = [NSString stringWithFormat:@"%@", [formatter stringFromDate:currentDate]];
         [xTitles addObject:str];
     }
     return xTitles;

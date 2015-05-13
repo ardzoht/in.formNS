@@ -14,6 +14,7 @@
     NSArray *count, *count1, *count2;
     NSInteger *nEntries, *nEntries1, *nEntries2;
     NSMutableArray *anAry, *anAry1, *anAry2;
+    int loop;
 }
 
 - (void)configUI:(NSIndexPath *)indexPath;
