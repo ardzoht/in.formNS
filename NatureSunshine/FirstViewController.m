@@ -138,6 +138,11 @@
     }
     return YES;
 }
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [_sender resignFirstResponder];
+}
+
 - (IBAction)logOut:(id)sender {
     [PFUser logOutInBackground];
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="graphsViewController">
@@ -33,7 +33,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8p-SO-Lh8">
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8p-SO-Lh8">
                     <rect key="frame" x="0.0" y="19" width="320" height="44"/>
                     <color key="barTintColor" red="0.68235294120000001" green="0.86274509799999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                     <textAttributes key="titleTextAttributes">
@@ -62,8 +62,8 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <tableView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ae5-z2-gKS">
-                    <rect key="frame" x="0.0" y="63" width="320" height="537"/>
+                <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ae5-z2-gKS">
+                    <rect key="frame" x="0.0" y="63" width="320" height="505"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="iW3-DI-8tM"/>
@@ -72,6 +72,15 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Ae5-z2-gKS" firstAttribute="top" secondItem="g8p-SO-Lh8" secondAttribute="bottom" id="IGX-8C-7uD"/>
+                <constraint firstAttribute="bottom" secondItem="Ae5-z2-gKS" secondAttribute="bottom" id="Num-ch-zaA"/>
+                <constraint firstItem="g8p-SO-Lh8" firstAttribute="leading" secondItem="LG5-Mc-aHa" secondAttribute="leading" id="Op7-bc-DZf"/>
+                <constraint firstAttribute="trailing" secondItem="g8p-SO-Lh8" secondAttribute="trailing" id="cpe-ut-tec"/>
+                <constraint firstItem="Ae5-z2-gKS" firstAttribute="leading" secondItem="g8p-SO-Lh8" secondAttribute="leading" id="gKe-uf-dfm"/>
+                <constraint firstItem="Ae5-z2-gKS" firstAttribute="trailing" secondItem="g8p-SO-Lh8" secondAttribute="trailing" id="gpV-Uj-zh0"/>
+                <constraint firstItem="g8p-SO-Lh8" firstAttribute="top" secondItem="LG5-Mc-aHa" secondAttribute="top" constant="19" id="p6R-3K-dV0"/>
+            </constraints>
             <point key="canvasLocation" x="-403" y="587"/>
         </view>
         <navigationBar contentMode="scaleAspectFit" id="xdR-f3-YrR">
