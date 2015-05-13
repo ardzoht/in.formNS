@@ -24,6 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.scrollView.contentSize = CGSizeMake(1024, 768);
+    self.scrollView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
 
 }
 

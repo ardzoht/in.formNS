@@ -881,6 +881,7 @@
                         <outlet property="loginButton" destination="F5T-bk-uiP" id="S3i-LN-EPL"/>
                         <outlet property="mailText" destination="bJH-Di-ciM" id="M0o-mt-HPu"/>
                         <outlet property="passwordText" destination="lNy-8i-NDU" id="t8I-tw-d8a"/>
+                        <outlet property="scrollView" destination="8sv-IL-hds" id="EON-tZ-I7E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5b-5c-Qsu" userLabel="First Responder" sceneMemberID="firstResponder"/>

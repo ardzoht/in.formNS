@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
     _mailText.delegate = self;
     _passwordText.delegate = self;
-
+    self.scrollView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
 
 }
 
