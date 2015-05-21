@@ -174,7 +174,17 @@
         [dataTxtField resignFirstResponder];
         return NO;
     }
+    
     return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([dataTxtField isFirstResponder] && [touch view] != dataTxtField) {
+        [dataTxtField resignFirstResponder];
+    }
+    [super touchesBegan:touches withEvent:event];
 }
 
 - (IBAction)showGraphs:(id)sender {

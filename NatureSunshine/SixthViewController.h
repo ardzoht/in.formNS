@@ -30,6 +30,7 @@
 
 - (IBAction)logout:(id)sender;
 
+@property (nonatomic, retain) NSString *userData;
 
 
 @end
